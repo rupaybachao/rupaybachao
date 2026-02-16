@@ -1,0 +1,576 @@
+/* body {} */
+
+.BackgroundBody {
+    background: linear-gradient(135deg, #0f7c3ba9, #9b7a1e81, #fc6b0378);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.BackgroundBody {
+    min-height: 100vh;
+}
+p {
+    margin-bottom: 0 !important;
+}
+
+.h-20px {
+    height: 20px;
+}
+
+.mckNavbar {
+    height: 83px;
+    background: white;
+}
+
+.h-30px {
+    height: 30px;
+}
+
+.center-elements {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.serif {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.h-200px {
+    height: 200px;
+}
+
+.h-15px {
+    height: 15px;
+}
+
+.linkOnHover {
+    color: black;
+    text-decoration: none;
+}
+
+.linkOnHover:hover {
+    color: rgb(34, 91, 248);
+}
+
+.boldHr {
+    height: 1px !important;
+    background-color: black;
+}
+
+.navDropdownText {
+    font-size: 14.5px;
+    font-weight: 350;
+}
+
+.navDropdownDiv {
+    box-shadow: 0 3px 0 0 transparent;
+    /* to ask if it needed toa dd or not to mama  */
+    /* transition: box-shadow 0.25s ease, color 0.25s ease; */
+}
+
+.navDropdownDiv:hover {
+    color: #ef711d !important;
+    box-shadow: 0 3px 0 0 #ef711d;
+}
+
+#collapseLinkDiv:active .transforArrow {
+    transform: rotateX(180deg);
+}
+
+.navDropdownDiv:hover .dropdownArrow {
+    transform: rotateX(180deg);
+}
+
+.linkTextDecorationOnHover:hover {
+    color: rgb(34, 91, 248);
+    text-decoration: underline !important;
+}
+
+.linkTextDecorationOnHover {
+    text-decoration: none !important;
+    color: black;
+}
+
+.h-100px {
+    height: 100px;
+}
+
+@keyframes slideLeftToRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-right {
+    animation: slideLeftToRight 0.6s ease forwards;
+}
+
+
+.dropdownMenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+}
+
+/* Remove slide movement */
+.offcanvas-top {
+    transform: none !important;
+    opacity: 0;
+}
+
+.offcanvas-top.show {
+    opacity: 1;
+}
+
+/* .offcanvas {
+    transition: opacity 0.4s ease !important;
+} */
+.btn-cursor {
+    cursor: pointer !important;
+}
+
+.fs-40 {
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 550;
+}
+
+.arrowDiv {
+    height: 75px !important;
+    width: 75px !important;
+    border-radius: 75px;
+    background: #727a895b;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrowDiv:hover {
+    background: #0f7c3b;
+    margin-bottom: 10px !important;
+}
+
+.imageFit {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h-85px {
+    height: 85px;
+}
+
+.musicApps {
+    height: 35px;
+    width: 35px !important;
+    background-color: black;
+    border-radius: 35px;
+}
+
+.musicApps:hover {
+    background-color: rgb(0, 110, 255);
+    margin-bottom: 2px !important;
+    box-shadow: 1px 0px 6px grey;
+}
+
+.h-450px {
+    height: 450px;
+}
+
+.h-650px {
+    height: 650px;
+}
+
+.h-730px {
+    height: 730px;
+}
+
+.divAnimation {
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+}
+
+.divAnimation:hover {
+    transform: scale(0.98) !important;
+}
+
+.backgroundImageAnimation {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 2s ease-in-out;
+    box-shadow: 50px 50px 1500px rgba(0, 0, 0, 0.7) inset;
+}
+
+/* Smooth zoom effect */
+.divAnimation:hover .backgroundImageAnimation {
+    transform: scale(1.1);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-up:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.fade-up:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.fade-up:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.fade-up:nth-child(1) {
+    transition-delay: 0.7s;
+}
+
+.fade-up:nth-child(2) {
+    transition-delay: 1s;
+}
+
+.fade-up:nth-child(3) {
+    transition-delay: 1.2s;
+}
+
+.bg-grey {
+    background-color: #F2F0EB;
+}
+
+.socialMediaDiv {
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.socialMediaDiv:hover {
+    margin-bottom: 2px !important;
+    background: white;
+}
+
+.orangeGradient-bg {
+    background: linear-gradient(45deg, #5f3702, #824c00, #f7a444);
+}
+
+.darkOrangeBG {
+    background-color: #4b2b01;
+}
+
+.darkGreenBG {
+    background-color: #408741;
+}
+
+.custom-indicators {
+    position: absolute;
+    margin-bottom: -50px !important;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.custom-indicators button {
+    background: none;
+    border: none;
+    text-indent: 0 !important;
+    opacity: 1;
+    width: 200px !important;
+    text-align: left;
+    padding: 0;
+}
+
+.indicator-line {
+    height: 7px;
+    /* width: 100px; */
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    opacity: 1 !important;
+    transition: background-color 0.3s ease;
+}
+
+.indicator-text {
+    color: white !important;
+    font-size: 13px;
+}
+
+.custom-indicators .active .indicator-line {
+    background-color: #f7a444 !important;
+}
+
+.carousel-indicators button {
+    opacity: 1 !important;
+}
+
+.opportunityCard {
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.opportunityCard:hover {
+    background-color: white;
+}
+
+.text-white-black {
+    color: white !important;
+}
+
+.opportunityCard:hover .text-white-black {
+    color: black !important;
+}
+
+.h-300px {
+    height: 300px;
+}
+
+.h-500px {
+    height: 500px;
+}
+
+.h-60px {
+    height: 60px;
+}
+
+.h-2px {
+    height: 2px;
+}
+
+.h-45px {
+    height: 45px;
+}
+
+.h-550px {
+    height: 550px;
+}
+
+.h-50px {
+    height: 50px;
+}
+
+.w-500px {
+    width: 500px;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+
+.blackBorderHover {
+    border: 1px solid black;
+}
+
+.blackBorderHover:hover {
+    border: 1.4px solid rgb(26, 113, 213) !important;
+}
+
+.blackBorderHover:focus-within {
+    border: 2px solid rgb(26, 113, 213) !important;
+}
+
+.video-wrapper {
+    /* width: 100%; */
+    /* height: 500px; */
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fills parent properly */
+}
+
+.video-controls {
+    z-index: 10;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* width: 400px; */
+}
+
+input:focus {
+    outline: none;
+    border-right: none;
+}
+
+#progressBar {
+    /* flex: 1; */
+    height: 2px;
+    accent-color: rgb(60, 149, 252);
+}
+
+.wave {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 50px;
+}
+
+.wave span {
+    width: 6px;
+    height: 20px;
+    background: white;
+    border-radius: 4px;
+
+    animation: bounce 1s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+/* Start animation when active */
+.wave.active span {
+    animation-play-state: running;
+}
+
+/* Keep your staggered delays */
+.wave span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wave span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.wave span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.wave span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 45px;
+    }
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 45px;
+    }
+}
+
+
+.text-black-white {
+    color: black;
+}
+
+.text-black-white :hover {
+    color: white !important;
+}
+
+.w-100px {
+    width: 100px !important;
+}
+
+.w-200px {
+    width: 200px !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.h-300px {
+    height: 300px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .inquiryDiv {
+        height: 400px;
+
+    }
+
+    .fs-13px {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .inquiryDiv {
+        height: 300px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .inquiryDiv {
+        height: 300px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .inquiryDiv {
+        height: 300px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .inquiryDiv {
+        height: 300px;
+    }
+}
