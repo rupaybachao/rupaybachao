@@ -14,213 +14,7 @@
 
 <body>
     <div class="container-fluid m-0 p-0 BackgroundBody">
-        <!-- NAVBAR DIV------------------------------------------------- -->
-        <div class="mckNavbar d-flex justify-content-between px-3 w-100">
-            <!-- FIRST PART OF NAVBAR CONTAINING THE MENU AND LOGO  -->
-            <div class="center-elements">
-                <button class="btn h-100 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas"
-                    aria-controls="menuOffcanvas">
-                    <img class="h-30px" src="./images/menu.png" alt="white-menu">
-                </button>
-                <!-- OFF CANVAS OF THE MENU BAR ------------------------------------------------------ -->
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas"
-                    aria-labelledby="menuOffcanvasLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="menuOffcanvasLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                            Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                            text,
-                            images,
-                            lists, etc.
-                        </div>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                Dropdown button
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <img src="./images/rupayBachaoLogo.png" alt="Logo" class="h-75">
-            </div>
-            <div class="d-flex align-items-center pt-4 justify-content-between h-100 w-60 d-xl-flex d-none">
-                <div class="center-elements h-100 navDropdownDiv" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasOfIndustries" aria-controls="offcanvasOfIndustries" id="industriesHover">
-                    <p class="m-0 navDropdownText">Industries</p>
-                    <svg class="dropdownArrow" width="25px" height="25px" viewBox="0 0 24 24" id="arrow_down"
-                        data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Mask" width="24" height="24" fill="none" stroke="currentColor"
-                                    stroke-width="1" />
-                            </clipPath>
-                        </defs>
-                        <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey"
-                            transform="translate(0 24) rotate(-90)">
-                            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none" />
-                            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey"
-                                clip-path="url(#clip-path)">
-                                <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                                    <path id="Rectangle" d="M0,6.586V0H6.586"
-                                        transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="1" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <div class="offcanvas offcanvas-top" data-bs-backdrop="false" data-bs-scroll="true"
-                        style="margin-top: 86px;" tabindex="-1" id="offcanvasOfIndustries"
-                        aria-labelledby="industriesOffcanvas">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="industriesOffcanvas">Offcanvas top</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            ..
-                        </div>
-                    </div>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasOfCapabilities" aria-controls="offcanvasOfCapabilities"
-                    id="capabilitiesHover">
-                    <p class="m-0 navDropdownText">Capabilities</p>
-                    <svg class="dropdownArrow" width="25px" height="25px" viewBox="0 0 24 24" id="arrow_down"
-                        data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Mask" width="24" height="24" fill="none" stroke="currentColor"
-                                    stroke-width="1" />
-                            </clipPath>
-                        </defs>
-                        <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey"
-                            transform="translate(0 24) rotate(-90)">
-                            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none" />
-                            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey"
-                                clip-path="url(#clip-path)">
-                                <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                                    <path id="Rectangle" d="M0,6.586V0H6.586"
-                                        transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="1" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <div class="offcanvas offcanvas-top" data-bs-backdrop="false" data-bs-scroll="true"
-                        style="margin-top: 86px;" tabindex="-1" id="offcanvasOfCapabilities"
-                        aria-labelledby="capabilitiesOffcanvas">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="capabilitiesOffcanvas">Offcanvas top</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            ..
-                        </div>
-                    </div>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv">
-                    <p class="m-0 navDropdownText">Tech & AI</p>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv">
-                    <p class="m-0 navDropdownText">Our Insights</p>
-                    <svg class="dropdownArrow" width="25px" height="25px" viewBox="0 0 24 24" id="arrow_down"
-                        data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Mask" width="24" height="24" fill="none" stroke="currentColor"
-                                    stroke-width="1" />
-                            </clipPath>
-                        </defs>
-                        <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey"
-                            transform="translate(0 24) rotate(-90)">
-                            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none" />
-                            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey"
-                                clip-path="url(#clip-path)">
-                                <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                                    <path id="Rectangle" d="M0,6.586V0H6.586"
-                                        transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="1" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv">
-                    <p class="m-0 navDropdownText">Careers</p>
-                    <svg class="dropdownArrow" width="25px" height="25px" viewBox="0 0 24 24" id="arrow_down"
-                        data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Mask" width="24" height="24" fill="none" stroke="currentColor"
-                                    stroke-width="1" />
-                            </clipPath>
-                        </defs>
-                        <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey"
-                            transform="translate(0 24) rotate(-90)">
-                            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none" />
-                            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey"
-                                clip-path="url(#clip-path)">
-                                <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                                    <path id="Rectangle" d="M0,6.586V0H6.586"
-                                        transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="1" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv">
-                    <p class="m-0 navDropdownText">About Us</p>
-                    <svg class="dropdownArrow" width="25px" height="25px" viewBox="0 0 24 24" id="arrow_down"
-                        data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs>
-                            <clipPath id="clip-path">
-                                <rect id="Mask" width="24" height="24" fill="none" stroke="currentColor"
-                                    stroke-width="1" />
-                            </clipPath>
-                        </defs>
-                        <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey"
-                            transform="translate(0 24) rotate(-90)">
-                            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none" />
-                            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey"
-                                clip-path="url(#clip-path)">
-                                <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                                    <path id="Rectangle" d="M0,6.586V0H6.586"
-                                        transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="1" />
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="center-elements h-100 navDropdownDiv">
-                    <p class="m-0 navDropdownText">McKinsey Blogs</p>
-                </div>
-            </div>
-            <!-- THIRD PART OF THE NAVBAR CONTAINING SUBSCRIBE LINK AND SEARCH BUTTON  -->
-            <div class="h-100 d-flex flex-column justify-content-center">
-                <div class="row g-0 p-0 m-0 btn-cursor center-elements me-2 d-md-flex d-none">
-                    Sign in | Subscribe
-                </div>
-                <div
-                    class="row g-0 p-0 m-0 align-items-center btn-cursor d-flex align-items-center justify-content-end me-2">
-                    <img class="h-30px w-auto" src="./images/search.png" alt="">
-                </div>
-            </div>
-        </div>
+        <div id="header"></div>
         <!-- HOME PAGE NEXT TO NAVBAR  ------------------------------------------>
         <div class="h-auto w-100">
             <div class="container-fluid g-0 h-auto w-100">
@@ -236,7 +30,7 @@
                             </div>
                             <div class="fade-up d-flex col-lg-10 col-md-10 col-sm-12">
                                 <p class="p-0">Game-changing work. People-powered growth. At
-                                    McKinsey, we help
+                                    RupayBachao, we help
                                     you
                                     think bigger, build
                                     stronger, and expand opportunity for all.</p>
@@ -320,14 +114,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="inquiryDiv bg-grey fade-up mt-3 p-5">
-                            <p class="fs-4 lh-1 text-center">Subscribe to the latest McKinsey Insights on the topics you
+                        <div class="inquiryDiv bg-grey fade-up mt-3 p-4">
+                            <p class="fs-4 lh-1 text-center">Subscribe to the latest RupayBachao Insights on the topics
+                                you
                                 care about.</p>
                             <div class="row g-0 h-45px blackBorderHover my-3" tabindex="0">
                                 <div class="col-10">
-                                    <input class="h-100 w-100 px-3 border-0" type="text" placeholder="Email address">
+                                    <input class="h-100 w-100 px-3 inputOrangeBorder" type="text" placeholder="Email address">
                                 </div>
-                                <div class="col-2 h-100 bg-primary center-elements">
+                                <div class="col-2 h-100 bg-orange center-elements">
                                     <img class="h-50" src="./images/whiteNext.png" alt=" next">
                                 </div>
                             </div>
@@ -361,13 +156,15 @@
                 </div>
                 <!-- ORANGE GRADIENT PODCAST VIDEO SERIES ------------------------------- -->
                 <div class="orangeGradient-bg py-5 mt-5 px-3">
-                    <div class="row g-0 p-0 px-5">
-                        <div class="col-lg-7 col-md-10 col-sm-12 text-white">
-                            <h1 class="serif fw-semibold">The McKinsey Podcast</h1>
-                            <p class="mb-0 my-3">A shortcut to clarity in a noisy world, The McKinsey Podcast dives into
+                    <div class="row g-0 p-0 px-4">
+                        <div class="col-lg-7 col-md-10 col-sm-12 text-white fade-up">
+                            <h1 class="serif fw-semibold">The RupayBachao Podcast</h1>
+                            <p class="mb-0 my-3">A shortcut to clarity in a noisy world, The RupayBachao Podcast dives
+                                into
                                 the
                                 ideas, issues, and
-                                innovations reshaping business, the economy, and society. Tune in to hear from McKinsey
+                                innovations reshaping business, the economy, and society. Tune in to hear from
+                                RupayBachao
                                 experts
                                 and thought leaders about the latest in AI breakthroughs, leadership, and more.</p>
                             <button class="w-200px btn rounded-0 h-45px bg-white my-5">
@@ -428,7 +225,7 @@
 
                         </div>
                         <!-- HORIZONTAL MUSIC DIV CAROUSEL VISIBLE ONLY ON SMALL SCREEN---------------------------------- -->
-                        <div class="row g-0 p-0 m-0 h-550px mx-2 d-sm-flex d-md-none">
+                        <div class="row g-0 p-0 m-0 h-550px d-sm-flex d-md-none">
                             <div id="audioCarousel" class="carousel slide h-500px ">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#audioCarousel" data-bs-slide-to="0"
@@ -450,13 +247,13 @@
                 </div>
                 <!-- CARDS OF HELPING CLIENTS  --------------------------------------------- -->
                 <div class="row g-0 py-5 h-auto darkOrangeBG text-white">
-                    <p class="text-center"> how we help clients </p>
-                    <div class="col center-elements">
+                    <p class="text-center fade-down"> how we help clients </p>
+                    <div class="col center-elements fade-down">
                         <h1 class="text-center col-7">
                             Let’s turn your biggest opportunities into your next big moves.
                         </h1>
                     </div>
-                    <div class="p-5 row g-0 p-0 ">
+                    <div class="p-4 row g-0 p-0 fade-down">
                         <div class="col-lg-4 col-md-6 col-sm-12 h-500px  opportunityCard p-3">
                             <div class="h-50">
                                 <img class="h-100 w-100" src="./images/homepageBgimage2.jpg" alt="">
@@ -487,30 +284,33 @@
                     </div>
                 </div>
                 <!-- CAREER VIDEOES ------------------------------------------------------- -->
-                <div class="row g-0 bg-white p-5">
+                <div class="row g-0 bg-white p-4">
                     <h6 class="text-center pb-5">Careers</h6>
-                    <div class="col-6 h-300px py-4 ">
+                    <div class="col-lg-6 col-md-6 col-sm-12 h-300px py-4 ">
                         <h2>Looking for your next move?</h2>
-                        <p class="my-3">We look for people who are energized by the same things as our clients: bold thinking, real
+                        <p class="my-3">We look for people who are energized by the same things as our clients: bold
+                            thinking, real
                             impact, and the courage to move first.</p>
                         <button class="darkGreenBG rounded-0 border-0 p-2 text-white">Explore Careers</button>
                     </div>
-                    <div class="col-6 h-300px d-flex justify-content-end align-items-start position-relative">
-                        <div class="darkGreenBG h-100px w-200px position-absolute "></div>
-                        <video class="w-80 h-auto position-absolute bottom-0 start-0 " controls style="object-fit: contain;">
+                    <div
+                        class="col-lg-6 col-md-6 col-sm-12 h-300px d-flex justify-content-end align-items-start position-relative">
+                        <div class="darkGreenBG h-50 w-25 position-absolut "></div>
+                        <video class="w-90 h-90 position-absolute bottom-0 start-0 " controls
+                            style="object-fit: contain;">
                             <source src="./videos/rupaybachaoVid.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
                 <!-- CARDS OF OPPORTUNITIES --------------------------------------------- -->
                 <div class="row g-0 py-5 darkGreenBG text-white">
-                    <p class="text-center">Societal impact</p>
-                    <div class="col center-elements">
+                    <p class="text-center fade-down">Societal impact</p>
+                    <div class="col center-elements fade-down">
                         <h1 class="text-center col-7">
                             Sharing our best to help more people succeed
                         </h1>
                     </div>
-                    <div class="p-5 row g-0 p-0 ">
+                    <div class="p-4 row g-0 p-0 fade-down">
                         <div class="col-lg-4 col-md-6 col-sm-12 h-500px  opportunityCard p-3">
                             <div class="h-50">
                                 <img class="h-100 w-100" src="./images/homepageBgimage2.jpg" alt="">
@@ -541,22 +341,37 @@
                     </div>
                 </div>
                 <!-- APPLICATION QR AND  DOWNLOAD LINKS ----------------------------------- -->
-                <div class="row g-0 bg-white p-5">
+                <div class="row g-0 bg-white p-4">
                     <div class="row g-0 justify-content-center">
-                        <h1 class="fw-normal col-8 text-center">The world moves fast. Don’t just keep pace. Stay ahead.
+                        <h1 class="fw-normal col-lg-8 col-md-8 col-sm-12 text-center">The world moves fast. Don’t just
+                            keep pace. Stay ahead.
                         </h1>
                     </div>
                     <div class="row g-0 justify-content-center h-75">
-                        <div class="col-5">
-                            <img class="h-100 w-100" src="./images/dummyQR.webp" alt="qrImage">
+                        <div class="col-lg-5 col-md-5 col-sm-12 ">
+                            <div class="row g-0 h-100">
+                                <div class="col-6 h-200px "></div>
+                                <div class="col-6 center-elements">
+                                    <img class="h-200px" src="./images/qr-code.png" alt="Qr code">
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-5 d-flex flex-column py-4">
+                        <div class="col-lg-5 col-md-5 col-sm-12 d-flex flex-column py-4">
                             <h1 class="fw-light">
-                                Download the McKinsey Insights
+                                Download the RupayBachao
                             </h1>
                             <div>
-                                <div class="btn bg-black text-white ">app store</div>
-                                <div class="btn bg-black text-white"> play store</div>
+                                <div class="btn p-0">
+                                    <a href="https://apps.apple.com/in/app/rupay-bachao/id1569960482">
+                                        <img class="h-30px rounded-2" src="./images/appStore.png" alt="app store">
+                                    </a>
+                                </div>
+                                <div class="btn p-0">
+                                    <a
+                                        href="https://play.google.com/store/apps/details?id=com.rupaybachao&pcampaignid=web_share">
+                                        <img class="h-30px " src="./images/playStore.png" alt="play store">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -564,7 +379,7 @@
                 <!-- FOOTER OF THE HOME PAGE ---------------------------------------------- -->
                 <div class="row g-0 bg-white">
                     <div
-                        class="h-auto bg-body-secondary d-flex flex-column justify-content-center align-items-center">
+                        class="h-auto p-4 bg-body-secondary d-flex flex-column justify-content-center align-items-center">
                         <div id="collapseLinkDiv"
                             class="btn border-top border-bottom border-dark border-start-0 border-end-0 rounded-0 justify-content-between py-2 d-flex align-items-center col-11"
                             data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
@@ -572,7 +387,7 @@
                             <a class="linkOnHover">
                                 <h4>Deffered Prosecution Agreement Related to Our Work for Purdue Pharma</h4>
                             </a>
-                            <svg class="dropdownArrow transforArrow" width="40px" height="40px" viewBox="0 0 24 24"
+                            <svg class="collapsiveArrow" width="40px" height="40px" viewBox="0 0 24 24"
                                 id="arrow_down" data-name="arrow down" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
@@ -599,8 +414,9 @@
                         <div class="collapse" id="collapseExample">
                             <div
                                 class="card card-body bg-transparent border-bottom border-dark border-end-0 border-start-0 border-top-0 rounded-0 center-elements">
-                                <div class="col-9">
-                                    <h5>McKinsey & Co. released the following statement after the Department of Justice
+                                <div class="col-lg-9 col-md-10 col-sm-12">
+                                    <h5>RupayBachao & Co. released the following statement after the Department of
+                                        Justice
                                         resolved its investigation into the firm’s past client service to Purdue Pharma.
                                     </h5><br><br>
                                     <p>December 13, 2024 – We are deeply sorry for our past client service to Purdue
@@ -612,12 +428,14 @@
                                     <br><br>
                                     <p>In the deferred prosecution agreement with DOJ, we have agreed to accept
                                         responsibility for our conduct and agreed to the facts and allegations
-                                        underlying the charges against McKinsey U.S. for misdemeanor conspiracy to aid
+                                        underlying the charges against RupayBachao U.S. for misdemeanor conspiracy to
+                                        aid
                                         and abet in misbranding and felony obstruction by a now-former senior partner.
-                                        In addition, McKinsey U.S. has agreed to settle a related civil False Claims Act
+                                        In addition, RupayBachao U.S. has agreed to settle a related civil False Claims
+                                        Act
                                         investigation and to enter into a Corporate Integrity Agreement with the Office
                                         of Inspector General at the Department of Health and Human Services. Under the
-                                        terms of the deferred prosecution agreement, McKinsey will: </p>
+                                        terms of the deferred prosecution agreement, RupayBachao will: </p>
                                     <br><br>
                                     <ul>
                                         <li>Pay $650 million over the next five years, which includes a $2 million
@@ -640,7 +458,7 @@
                                         conduct that leaves no doubt about the expectations of every one of our
                                         colleagues, alongside a substantial financial investment in our control
                                         functions. Though we wish we had taken these steps sooner, we are committed to
-                                        building on them to ensure that McKinsey sets the standard for accountability
+                                        building on them to ensure that RupayBachao sets the standard for accountability
                                         and compliance across our profession.</p>
                                 </div>
                                 <div class="col-8 d-flex justify-content-between">
@@ -674,8 +492,8 @@
                     </div>
                     <div class="boldHr"></div>
                     <img class="h-100px w-auto mx-5 mt-5" src="./images/rupayBachaoLogo.png" alt="logo">
-                    <div class="row g-0">
-                        <div class="col-7 px-5">
+                    <div class="row g-0 p-4">
+                        <div class="col-lg-7 col-md-12 col-sm-12 py-3">
                             <div class="col-6 py-2 d-flex justify-content-between">
                                 <a href="#" class="linkTextDecorationOnHover">Careers</a>
                                 <a href="#" class="linkTextDecorationOnHover">About us</a>
@@ -688,7 +506,7 @@
                                 <a href="#" class="linkTextDecorationOnHover">Global locations</a>
                             </div>
                         </div>
-                        <div class="col-5 px-">
+                        <div class="col-lg-5 col-md-12 col-sm-12 ">
                             <h4>Subscribe</h4>
                             <p>Select topics and stay current with our latest insights</p>
                             <div class="row g-0 py-4 g-2">
@@ -696,7 +514,7 @@
                                     <input class="h-100 ps-3 w-100" type="text" placeholder="Enter address">
                                 </div>
                                 <div class="col-4">
-                                    <button class="btn btn-primary h-100 w-100 rounded-0">
+                                    <button class="btn bg-orange text-white h-100 w-100 rounded-0">
                                         Submit
                                     </button>
                                 </div>
@@ -704,17 +522,17 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="row g-0 ">
-                        <div class="col-6 d-flex h-45px align-items-end">
+                    <div class="row g-0 py-3 px-4">
+                        <div class="col-lg-6 col-md-6 col-sm-12 d-flex h-45px align-items-end">
                             <div class="musicApps center-elements p-1 me-3">
-                                <svg fill="white" width="800px" height="800px" viewBox="0 0 32 32"
+                                <svg fill="white" width="20px" height="20px" viewBox="0 0 32 32"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M 8.6425781 4 C 7.1835781 4 6 5.181625 6 6.640625 C 6 8.099625 7.182625 9.3085938 8.640625 9.3085938 C 10.098625 9.3085938 11.283203 8.099625 11.283203 6.640625 C 11.283203 5.182625 10.101578 4 8.6425781 4 z M 21.535156 11 C 19.316156 11 18.0465 12.160453 17.4375 13.314453 L 17.373047 13.314453 L 17.373047 11.310547 L 13 11.310547 L 13 26 L 17.556641 26 L 17.556641 18.728516 C 17.556641 16.812516 17.701266 14.960938 20.072266 14.960938 C 22.409266 14.960937 22.443359 17.145609 22.443359 18.849609 L 22.443359 26 L 26.994141 26 L 27 26 L 27 17.931641 C 27 13.983641 26.151156 11 21.535156 11 z M 6.3632812 11.310547 L 6.3632812 26 L 10.923828 26 L 10.923828 11.310547 L 6.3632812 11.310547 z" />
                                 </svg>
                             </div>
                             <div class="musicApps center-elements p-1 me-3">
-                                <svg fill="white" width="800px" height="800px" viewBox="0 0 24 24"
+                                <svg fill="white" width="20px" height="20px" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
 
                                     <g data-name="Layer 2">
@@ -733,14 +551,14 @@
                                 </svg>
                             </div>
                             <div class="musicApps center-elements p-1 me-3">
-                                <svg fill="white" width="800px" height="800px" viewBox="0 0 32 32"
+                                <svg fill="white" width="20px" height="20px" viewBox="0 0 32 32"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M 7 5 C 5.90625 5 5 5.90625 5 7 L 5 25 C 5 26.09375 5.90625 27 7 27 L 25 27 C 26.09375 27 27 26.09375 27 25 L 27 7 C 27 5.90625 26.09375 5 25 5 Z M 7 7 L 25 7 L 25 25 L 19.8125 25 L 19.8125 18.25 L 22.40625 18.25 L 22.78125 15.25 L 19.8125 15.25 L 19.8125 13.3125 C 19.8125 12.4375 20.027344 11.84375 21.28125 11.84375 L 22.90625 11.84375 L 22.90625 9.125 C 22.628906 9.089844 21.667969 9.03125 20.5625 9.03125 C 18.257813 9.03125 16.6875 10.417969 16.6875 13 L 16.6875 15.25 L 14.0625 15.25 L 14.0625 18.25 L 16.6875 18.25 L 16.6875 25 L 7 25 Z" />
                                 </svg>
                             </div>
                             <div class="musicApps center-elements p-1 me-3">
-                                <svg width="800px" height="800px" viewBox="0 0 512 512" version="1.1"
+                                <svg width="20px" height="20px" viewBox="0 0 512 512" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>youtube-filled</title>
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -755,7 +573,7 @@
                                 </svg>
                             </div>
                             <div class="musicApps center-elements p-1 me-3">
-                                <svg width="800px" height="800px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <defs>
                                         <style>
@@ -772,7 +590,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="col-6 ">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="d-flex justify-content-between py-2">
                                 <a href="#" class="linkTextDecorationOnHover fs-13px fw-bold">Scam warning</a>
                                 <a href="#" class="linkTextDecorationOnHover fs-13px fw-bold">FAQs</a>
@@ -791,14 +609,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex ">
-                        <p class="fs-13px text-body-secondary col-3">McKinsey Insights - Get our latest thinking on your
+                    <div class="d-flex row g-0 px-4 align-items-center">
+                        <p class="fs-13px text-body-secondary col-lg-3 col-md-3 col-sm-12">RupayBachao Insights - Get
+                            our
+                            latest thinking on your
                             iPhone, iPad, or Android device.</p>
-                        <div class="col-5 align-items-center d-flex justify-content-center">
-                            <button class="btn bg-black text-white mx-1">App store</button>
-                            <button class="btn bg-black text-white mx-1">Play store</button>
+                        <div class="col-lg-5 col-md-5 col-sm-12  align-items-center d-flex py-3 justify-content-center">
+                            <button class="btn mx-1">
+                                <a href="https://apps.apple.com/in/app/rupay-bachao/id1569960482">
+                                    <img class="h-30px rounded-2" src="./images/appStore.png" alt="app store">
+                                </a>
+
+                            </button>
+                            <button class="btn mx-1">
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.rupaybachao&pcampaignid=web_share">
+                                    <img class="h-30px" src="./images/playStore.png" alt="play store">
+                                </a>
+                            </button>
                         </div>
-                        <p class="col text-end fs-13px text-body-secondary">© 1996-2026 McKinsey & Company</p>
+                        <p class="col-lg-4 col-md-4 col-sm-12 fs-13px text-body-secondary text-center">© 1996-2026
+                            RupayBachao & Company</p>
                     </div>
                 </div>
             </div>

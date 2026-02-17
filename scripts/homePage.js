@@ -1,72 +1,44 @@
-document.addEventListener("click", function (e) {
-  const offcanvasEl = document.getElementById("offcanvasOfIndustries");
-  const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-  if (!offcanvasEl.classList.contains("show")) return;
-  if (!offcanvasEl.contains(e.target)) {
-    offcanvas.hide();
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header").innerHTML = data;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  fetch("../navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      // ✅ CALL active function AFTER navbar is inserted
+      setActiveLink();
+    });
+
+});
+
+
+function setActiveLink() {
+
+  let currentPage = window.location.pathname.split("/").pop();
+
+  if (currentPage === "") {
+    currentPage = "index.html";
   }
-});
 
-document.addEventListener("click", function (e) {
-  const offcanvasEl = document.getElementById("offcanvasOfCapabilities");
-  const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-  if (!offcanvasEl.classList.contains("show")) return;
-  if (!offcanvasEl.contains(e.target)) {
-    offcanvas.hide();
-  }
-});
+  const links = document.querySelectorAll(".navDropdownText");
 
-const industriesTrigger = document.getElementById("industriesHover");
-const industriesOffcanvasEl = document.getElementById("offcanvasOfIndustries");
-const industriesOffcanvas = new bootstrap.Offcanvas(industriesOffcanvasEl);
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+      link.parentElement.classList.add("active");
+    }
+  });
 
-let isHoveringIndustries = false;
+}
 
-industriesTrigger.addEventListener("mouseenter", () => {
-  industriesOffcanvas.show();
-});
-
-industriesTrigger.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (!isHoveringIndustries) industriesOffcanvas.hide();
-  }, 150);
-});
-
-industriesOffcanvasEl.addEventListener("mouseenter", () => {
-  isHoveringIndustries = true;
-});
-
-industriesOffcanvasEl.addEventListener("mouseleave", () => {
-  isHoveringIndustries = false;
-  industriesOffcanvas.hide();
-});
-
-const capabilitiesTrigger = document.getElementById("capabilitiesHover");
-const capabilitiesOffcanvasEl = document.getElementById(
-  "offcanvasOfCapabilities",
-);
-const capabilitiesOffcanvas = new bootstrap.Offcanvas(capabilitiesOffcanvasEl);
-
-let isHoveringCapabilities = false;
-
-capabilitiesTrigger.addEventListener("mouseenter", () => {
-  capabilitiesOffcanvas.show();
-});
-
-capabilitiesTrigger.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (!isHoveringIndustries) capabilitiesOffcanvas.hide();
-  }, 150);
-});
-
-capabilitiesOffcanvasEl.addEventListener("mouseenter", () => {
-  isHoveringCapabilities = true;
-});
-
-capabilitiesOffcanvasEl.addEventListener("mouseleave", () => {
-  isHoveringCapabilities = false;
-  isHoveringCapabilities.hide();
-});
 // THIS IS THE ANIMATION THAT TOOKS SOME TIME TO SHOW ANOTHE FADE UP ANIMATION
 const elements = document.querySelectorAll(".fade-up");
 
@@ -82,6 +54,22 @@ const observer = new IntersectionObserver(
 );
 
 elements.forEach((el) => observer.observe(el));
+
+// THIS IS THE ANIMATION THAT TOOKS SOME TIME TO SHOW ANOTHE FADE UP ANIMATION
+const fadeDownElements = document.querySelectorAll(".fade-down");
+
+const observer1 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 },
+);
+
+fadeDownElements.forEach((el) => observer1.observe(el));
 
 /* ===========================
    HORIZONTAL MUSIC CAROUSEL FIX

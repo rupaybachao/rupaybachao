@@ -1,20 +1,14 @@
-/* body {} */
+body {
+    height: 100vh;
+}
 
 .BackgroundBody {
     background: linear-gradient(135deg, #0f7c3ba9, #9b7a1e81, #fc6b0378);
+
     margin: 0 !important;
     padding: 0 !important;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.BackgroundBody {
-    min-height: 100vh;
-}
 p {
     margin-bottom: 0 !important;
 }
@@ -22,6 +16,52 @@ p {
 .h-20px {
     height: 20px;
 }
+
+.h-100vh {
+    height: 100vh;
+}
+
+.teamMembersImageHover {
+    transition: all 1s ease-in-out;
+}
+
+.teamMembersImageHover:hover {
+    box-shadow: 0px -100px 100px 0px rgba(0, 0, 0, 0.4) inset !important;
+}
+
+.teamMembersImageHover:hover .teamMembersText {
+    visibility: visible;
+}
+
+.teamMembersText {
+    visibility: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: 0.5em;
+    top: 0.5em;
+    transform: translateY(-50%);
+    width: 0.7em;
+    height: 0.9em;
+    border-radius: 0;
+    border: 1px solid #ef711d;
+    background-color: #fff;
+    display: inline-block;
+}
+
 
 .mckNavbar {
     height: 83px;
@@ -42,8 +82,20 @@ p {
     font-family: "Times New Roman", Times, serif !important;
 }
 
+video {
+    box-shadow: none !important;
+}
+
 .w-60 {
     width: 60% !important;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.h-90 {
+    height: 90% !important;
 }
 
 .h-200px {
@@ -60,7 +112,7 @@ p {
 }
 
 .linkOnHover:hover {
-    color: rgb(34, 91, 248);
+    color: #ef711d;
 }
 
 .boldHr {
@@ -71,17 +123,29 @@ p {
 .navDropdownText {
     font-size: 14.5px;
     font-weight: 350;
-}
-
-.navDropdownDiv {
-    box-shadow: 0 3px 0 0 transparent;
-    /* to ask if it needed toa dd or not to mama  */
-    /* transition: box-shadow 0.25s ease, color 0.25s ease; */
+    text-decoration: none !important;
+    color: black !important;
 }
 
 .navDropdownDiv:hover {
     color: #ef711d !important;
     box-shadow: 0 3px 0 0 #ef711d;
+}
+
+.navDropdownText.active {
+    color: #ef711d !important;
+}
+
+.navDropdownDiv.active {
+    border-bottom: 3px solid #ef711d;
+}
+
+.navDropdownDiv {
+    box-shadow: 0 3px 0 0 transparent;
+}
+
+.orangeText {
+    color: #4b2b01;
 }
 
 #collapseLinkDiv:active .transforArrow {
@@ -93,7 +157,7 @@ p {
 }
 
 .linkTextDecorationOnHover:hover {
-    color: rgb(34, 91, 248);
+    color: #ef711d;
     text-decoration: underline !important;
 }
 
@@ -164,6 +228,10 @@ p {
     margin-bottom: 10px !important;
 }
 
+.greenText {
+    color: #0f7c3b;
+}
+
 .imageFit {
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,7 +249,7 @@ p {
 }
 
 .musicApps:hover {
-    background-color: rgb(0, 110, 255);
+    background-color: #ef711d;
     margin-bottom: 2px !important;
     box-shadow: 1px 0px 6px grey;
 }
@@ -200,14 +268,14 @@ p {
 
 .divAnimation {
     overflow: hidden;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 1s ease-in-out !important;
     transform-origin: center;
     width: 100%;
     height: 100%;
 }
 
 .divAnimation:hover {
-    transform: scale(0.98) !important;
+    transform: scale(0.95) !important;
 }
 
 .backgroundImageAnimation {
@@ -215,13 +283,16 @@ p {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: transform 2s ease-in-out;
+    transition: transform 1s ease-in-out;
     box-shadow: 50px 50px 1500px rgba(0, 0, 0, 0.7) inset;
 }
 
-/* Smooth zoom effect */
 .divAnimation:hover .backgroundImageAnimation {
     transform: scale(1.1);
+}
+
+.bg-orange {
+    background-color: #ef711d !important;
 }
 
 .fade-in {
@@ -236,39 +307,26 @@ p {
 }
 
 
+.fade-down {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.6s ease;
+}
+
+.fade-down.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-up.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-.fade-up:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.fade-up:nth-child(2) {
-    transition-delay: 0.3s;
-}
-
-.fade-up:nth-child(3) {
-    transition-delay: 0.5s;
-}
-
-.fade-up:nth-child(1) {
-    transition-delay: 0.7s;
-}
-
-.fade-up:nth-child(2) {
-    transition-delay: 1s;
-}
-
-.fade-up:nth-child(3) {
-    transition-delay: 1.2s;
 }
 
 .bg-grey {
@@ -394,17 +452,28 @@ p {
     font-size: 13px;
 }
 
+.dropdownArrow {
+    transition: transform 0.3s ease;
+}
+
+#collapseLinkDiv[aria-expanded="true"] .collapsiveArrow {
+    transform: rotate(180deg);
+    color: #ef711d !important;
+}
+#collapseLinkDiv[aria-expanded="true"] .linkOnHover {
+    color: #ef711d !important;
+}
 
 .blackBorderHover {
     border: 1px solid black;
 }
 
 .blackBorderHover:hover {
-    border: 1.4px solid rgb(26, 113, 213) !important;
+    border: 1.4px solid #ef711d !important;
 }
 
 .blackBorderHover:focus-within {
-    border: 2px solid rgb(26, 113, 213) !important;
+    border: 2px solid #ef711d !important;
 }
 
 .video-wrapper {
@@ -433,13 +502,17 @@ p {
 
 input:focus {
     outline: none;
-    border-right: none;
+    border: none;
+}
+
+.inputOrangeBorder:focus {
+    outline: #ef711d;
+    border: 1px solid #ef711d;
 }
 
 #progressBar {
-    /* flex: 1; */
     height: 2px;
-    accent-color: rgb(60, 149, 252);
+    accent-color: #ef711d;
 }
 
 .wave {
@@ -535,6 +608,22 @@ input:focus {
     height: 300px;
 }
 
+.h-400px {
+    height: 400px;
+}
+
+.h-350px {
+    height: 350px;
+}
+
+.boxShadow {
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.144);
+}
+
+.h-150px {
+    height: 150px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .inquiryDiv {
@@ -559,6 +648,11 @@ input:focus {
     .inquiryDiv {
         height: 300px;
     }
+
+    .px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -566,6 +660,11 @@ input:focus {
     .inquiryDiv {
         height: 300px;
     }
+
+    /* .px-5{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
