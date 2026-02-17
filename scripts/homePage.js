@@ -8,12 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  fetch("../navbar.html")
+  fetch("./navbar.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
-
-      // ✅ CALL active function AFTER navbar is inserted
       setActiveLink();
     });
 
