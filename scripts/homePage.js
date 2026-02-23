@@ -339,86 +339,73 @@ let myChart = null;
 
 function calculateLoan() {
 
-  let P = parseFloat(document.getElementById("loanAmount").value);
-  let totalMonths = parseInt(document.getElementById("months").value);
-  let annualRate = parseFloat(document.getElementById("interest").value);
+    let loanInput = document.getElementById("loanAmount");
+    let monthInput = document.getElementById("months");
+    let interestInput = document.getElementById("interest");
 
+    let P = parseFloat(loanInput.value);
+    let totalMonths = parseInt(monthInput.value);
+    let annualRate = parseFloat(interestInput.value);
 
-  let r = annualRate / 12 / 100;
-  let EMI;
-  let totalInterest;
-  let totalPayment;
+    if (!P || P <= 0) {
+        P = 1;
+        loanInput.value = 1;
+    }
 
-  if (annualRate === 0) {
-    EMI = P / totalMonths;
-    totalInterest = 0;
-    totalPayment = P;
-  } else {
-    let power = Math.pow(1 + r, totalMonths);
-    EMI = (P * r * power) / (power - 1);
-    totalPayment = EMI * totalMonths;
-    totalInterest = totalPayment - P;
-  }
+    if (!totalMonths || totalMonths <= 0) {
+        totalMonths = 1;
+        monthInput.value = 1;
+    }
 
-  document.getElementById("emi").innerHTML =
-    "<strong>Monthly EMI:</strong> " + EMI.toFixed(2);
+    if (annualRate === "" || annualRate < 0) {
+        annualRate = 1;
+        interestInput.value = 1;
+    }
 
-  document.getElementById("totalInterest").innerHTML =
-    "<strong>Total Interest:</strong> " + totalInterest.toFixed(2);
+    let r = annualRate / 12 / 100;
+    let EMI, totalInterest, totalPayment;
 
-  const ctx = document.getElementById("loanChart").getContext("2d");
+    if (annualRate === 0) {
+        EMI = P / totalMonths;
+        totalInterest = 0;
+        totalPayment = P;
+    } else {
+        let power = Math.pow(1 + r, totalMonths);
+        EMI = (P * r * power) / (power - 1);
+        totalPayment = EMI * totalMonths;
+        totalInterest = totalPayment - P;
+    }
 
-  if (myChart) {
-    myChart.destroy();
-  }
+    const ctx = document.getElementById("loanChart").getContext("2d");
 
-  myChart = new Chart(ctx, {
-    type: "pie",
-    data: {
-      labels: ["Principal Amount", "Total Interest"],
-      datasets: [{
-        data: [P, totalInterest],
-        backgroundColor: ["#0d6efd", "#6c757d"],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: "bottom"
+    if (myChart) {
+        myChart.destroy();
+    }
+
+    myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            labels: ["Principal Amount", "Total Interest"],
+            datasets: [{
+                data: [P, totalInterest],
+                backgroundColor: ["#ffc107", "#198754"]
+            }]
         },
-        tooltip: {
-          enabled: false
-        },
-        datalabels: {
-          color: "#ffffff",
-          font: {
-            weight: "bold",
-            size: 14
-          },
-          formatter: function (value) {
-            if (totalPayment === 0) return "0%";
-            let percentage = ((value / totalPayment) * 100).toFixed(1);
-            return percentage + "%";
-          }
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "65%",
+            plugins: {
+                legend: {
+                    position: "bottom"
+                }
+            }
         }
-      }
-    },
-    plugins: [ChartDataLabels]
-  });
-}
+    });
 
-
-function resetForm() {
-  document.getElementById("loanAmount").value = "";
-  document.getElementById("months").value = "";
-  document.getElementById("interest").value = "";
-  document.getElementById("emi").innerHTML = "";
-  document.getElementById("totalInterest").innerHTML = "";
-
-  if (myChart) {
-    myChart.destroy();
-    myChart = null;
-  }
+    document.getElementById("resultBox").innerHTML = `
+        <div>Monthly EMI:<br>${EMI.toFixed(0)}</div>
+        <div>Total Interest:<br>${totalInterest.toFixed(0)}</div>
+        <div>Total Payment:<br>${totalPayment.toFixed(0)}</div>
+    `;
 }
