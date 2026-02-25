@@ -36,6 +36,46 @@ p {
 .teamMembersText {
     visibility: hidden;
 }
+        body {
+            background: #1f2e35;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8bd22c;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #9aa5a8 !important;
+            padding: 10px !important;
+        }
+
+        th {
+            background-color: #243942 !important;
+        }
+
+        .left {
+            text-align: left;
+            padding-left: 10px !important;
+        }
+
+        .highlight {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
 
 ul {

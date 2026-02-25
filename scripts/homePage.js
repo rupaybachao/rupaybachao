@@ -335,77 +335,142 @@ videos.forEach(video => {
 });
 
 
-let myChart = null;
+// let myChart = null;
 
-function calculateLoan() {
+// function calculateLoan() {
 
-    let loanInput = document.getElementById("loanAmount");
-    let monthInput = document.getElementById("months");
-    let interestInput = document.getElementById("interest");
+//     let loanInput = document.getElementById("loanAmount");
+//     let monthInput = document.getElementById("months");
+//     let interestInput = document.getElementById("interest");
 
-    let P = parseFloat(loanInput.value);
-    let totalMonths = parseInt(monthInput.value);
-    let annualRate = parseFloat(interestInput.value);
+//     let P = parseFloat(loanInput.value);
+//     let totalMonths = parseInt(monthInput.value);
+//     let annualRate = parseFloat(interestInput.value);
 
-    if (!P || P <= 0) {
-        P = 1;
-        loanInput.value = 1;
+//     if (!P || P <= 0) {
+//         P = 1;
+//         loanInput.value = 1;
+//     }
+
+//     if (!totalMonths || totalMonths <= 0) {
+//         totalMonths = 1;
+//         monthInput.value = 1;
+//     }
+
+//     if (annualRate === "" || annualRate < 0) {
+//         annualRate = 1;
+//         interestInput.value = 1;
+//     }
+
+//     let r = annualRate / 12 / 100;
+//     let EMI, totalInterest, totalPayment;
+
+//     if (annualRate === 0) {
+//         EMI = P / totalMonths;
+//         totalInterest = 0;
+//         totalPayment = P;
+//     } else {
+//         let power = Math.pow(1 + r, totalMonths);
+//         EMI = (P * r * power) / (power - 1);
+//         totalPayment = EMI * totalMonths;
+//         totalInterest = totalPayment - P;
+//     }
+
+//     const ctx = document.getElementById("loanChart").getContext("2d");
+
+//     if (myChart) {
+//         myChart.destroy();
+//     }
+
+//     myChart = new Chart(ctx, {
+//         type: "doughnut",
+//         data: {
+//             labels: ["Principal Amount", "Total Interest"],
+//             datasets: [{
+//                 data: [P, totalInterest],
+//                 backgroundColor: ["#ffc107", "#198754"]
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: false,
+//             cutout: "65%",
+//             plugins: {
+//                 legend: {
+//                     position: "bottom"
+//                 }
+//             }
+//         }
+//     });
+
+//     document.getElementById("resultBox").innerHTML = `
+//         <div>Monthly EMI:<br>${EMI.toFixed(0)}</div>
+//         <div>Total Interest:<br>${totalInterest.toFixed(0)}</div>
+//         <div>Total Payment:<br>${totalPayment.toFixed(0)}</div>
+//     `;
+// }
+
+const labels = [
+    "Using Rupay Bachao - 46 Months",
+    "Normal Payment - 60 Months"
+];
+
+const dataValues = [46, 60];
+
+const colors = ["#198754", "#ffc107"];
+
+const ctx1 = document.getElementById("loanChart").getContext("2d");
+
+const loanChart = new Chart(ctx1, {
+    type: "doughnut",
+    data: {
+        labels: labels,
+        datasets: [{
+            data: dataValues,
+            backgroundColor: colors
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "70%",
+        plugins: {
+            legend: {
+                position: "bottom"
+            }
+        }
     }
+});
 
-    if (!totalMonths || totalMonths <= 0) {
-        totalMonths = 1;
-        monthInput.value = 1;
-    }
 
-    if (annualRate === "" || annualRate < 0) {
-        annualRate = 1;
-        interestInput.value = 1;
-    }
+const ctx2 = document.getElementById("loanBarChart").getContext("2d");
 
-    let r = annualRate / 12 / 100;
-    let EMI, totalInterest, totalPayment;
-
-    if (annualRate === 0) {
-        EMI = P / totalMonths;
-        totalInterest = 0;
-        totalPayment = P;
-    } else {
-        let power = Math.pow(1 + r, totalMonths);
-        EMI = (P * r * power) / (power - 1);
-        totalPayment = EMI * totalMonths;
-        totalInterest = totalPayment - P;
-    }
-
-    const ctx = document.getElementById("loanChart").getContext("2d");
-
-    if (myChart) {
-        myChart.destroy();
-    }
-
-    myChart = new Chart(ctx, {
-        type: "doughnut",
-        data: {
-            labels: ["Principal Amount", "Total Interest"],
-            datasets: [{
-                data: [P, totalInterest],
-                backgroundColor: ["#ffc107", "#198754"]
-            }]
+const loanBarChart = new Chart(ctx2, {
+    type: "bar",
+    data: {
+        labels: labels,
+        datasets: [{
+            label: "Loan Tenure (Months)",
+            data: dataValues,
+            backgroundColor: colors
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            }
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            cutout: "65%",
-            plugins: {
-                legend: {
-                    position: "bottom"
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: "Months"
                 }
             }
         }
-    });
-
-    document.getElementById("resultBox").innerHTML = `
-        <div>Monthly EMI:<br>${EMI.toFixed(0)}</div>
-        <div>Total Interest:<br>${totalInterest.toFixed(0)}</div>
-        <div>Total Payment:<br>${totalPayment.toFixed(0)}</div>
-    `;
-}
+    }
+});

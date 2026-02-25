@@ -12,6 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="your-js-file.js"></script>
+    <style>
+    </style>
 
 </head>
 
@@ -372,13 +374,13 @@
 
                     </div>
                 </div>
+
                 <!-- PIE CHART -->
 
-                <div class="container my-5">
-                    <div class="row align-items-stretch">
+                <!-- <div class="container my-5">
+                    <div class="row">
 
-                        <!-- LEFT SIDE -->
-                        <div class="col-md-6 d-flex">
+                        <div class="col-md-6">
                             <div class="shadow p-4 rounded w-100" style="background-color: white;">
                                 <h3 class="text-center mb-4">Loan EMI Calculation</h3>
 
@@ -400,14 +402,8 @@
                                             oninput="calculateLoan()">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- RIGHT SIDE -->
-                        <div class="col-md-6 d-flex">
-                            <div class="shadow p-4 rounded w-100" style="background-color: white;">
-
-                                <div style="height:300px;">
+                                <div style="height:300px; margin-top:30px;">
                                     <canvas id="loanChart"></canvas>
                                 </div>
 
@@ -420,7 +416,234 @@
                         </div>
 
                     </div>
+                </div> -->
+                <div class="container my-5">
+
+                    <h2 class="text-center mb-4 ">
+                        RupayBachao RFT Marketplace – Strategic Segments
+                    </h2>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-dark align-middle">
+
+                            <thead class="table-success text-dark">
+                                <tr>
+                                    <th style="width: 20%;">Segment</th>
+                                    <th style="width: 35%;">Strategic Value</th>
+                                    <th style="width: 45%;">Representative Categories</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>Hospitality & Lifestyle</strong></td>
+                                    <td>
+                                        Drives discretionary spending and member engagement;
+                                        enhances loyalty
+                                    </td>
+                                    <td>
+                                        Hotels & Banquets • Restaurants, Bars & Cafés •
+                                        Salons, Spas & Gyms
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Real Estate & Infrastructure</strong></td>
+                                    <td>
+                                        Monetizes high-value assets; converts idle capacity
+                                        into tradeable value
+                                    </td>
+                                    <td>
+                                        Homes, Offices, Retail Spaces • Building Materials •
+                                        Architects & Contractors • Home Décor & Furnishings
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Professional & Business Services</strong></td>
+                                    <td>
+                                        Supports operational needs; strengthens business networks
+                                    </td>
+                                    <td>
+                                        Lawyers • Chartered Accountants & Auditors •
+                                        Co-working Spaces • Security Services •
+                                        Courier & Logistics • Printing & Office Supplies
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Retail & Consumer Goods</strong></td>
+                                    <td>
+                                        High-frequency transactions; boosts platform liquidity
+                                        and circulation
+                                    </td>
+                                    <td>
+                                        FMCG & Groceries • Apparel & Footwear •
+                                        Electronics & Computers • Mobile & Communication Services •
+                                        Fuel • Automobiles
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Healthcare & Essentials</strong></td>
+                                    <td>
+                                        Essential services ensure recurring platform engagement
+                                    </td>
+                                    <td>
+                                        Chemists & Medicines • Electronic Surveillance Equipment
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
                 </div>
+
+                <div class="container my-5">
+                    <div class="shadow p-4 rounded" style="background-color:white;">
+
+                        <h3 class="text-center mb-4">Loan Comparison</h3>
+
+                        <div class="row text-center mb-4 fw-bold">
+                            <div class="col-md-4">
+                                Total Loan Amount <br> ₹10,00,000
+                            </div>
+                            <div class="col-md-4">
+                                Interest Rate <br> 11% p.a.
+                            </div>
+                            <div class="col-md-4">
+                                EMI <br> ₹21,742
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Doughnut Chart -->
+                            <div class="col-md-6">
+                                <div style="height:350px;">
+                                    <canvas id="loanChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Bar Chart -->
+                            <div class="col-md-6">
+                                <div style="height:350px;">
+                                    <canvas id="loanBarChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Table -->
+
+                <div class="container my-5">
+
+                    <h1 class="mb-4">Effect of RupayBachao on your P&amp;L</h1>
+
+                    <div class="table-responsive">
+                        <table class="table table-dark">
+                            <tr>
+                                <th rowspan="2">Particular</th>
+                                <th colspan="3">Original Values (Pre Optimization Level)</th>
+                                <th colspan="3">Value after RupayBachao</th>
+                            </tr>
+                            <tr>
+                                <th>Typical Industry</th>
+                                <th>Service Industry</th>
+                                <th>Raw material Intensive and Low Margin</th>
+                                <th>Typical Industry</th>
+                                <th>Service Industry</th>
+                                <th>Raw material Intensive and Low Margin</th>
+                            </tr>
+
+                            <tr>
+                                <td class="left">Sale (A)</td>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>110</td>
+                                <td>110</td>
+                                <td>110</td>
+                            </tr>
+
+                            <tr>
+                                <td class="left">Variable Cost (B)</td>
+                                <td>60</td>
+                                <td>20</td>
+                                <td>90</td>
+                                <td>66</td>
+                                <td>22</td>
+                                <td>99</td>
+                            </tr>
+
+                            <tr>
+                                <td class="left">Contribution (C = A-B)</td>
+                                <td>40</td>
+                                <td>80</td>
+                                <td>10</td>
+                                <td>44</td>
+                                <td>88</td>
+                                <td>11</td>
+                            </tr>
+
+                            <tr>
+                                <td class="left">Fixed Cost (D)</td>
+                                <td>30</td>
+                                <td>70</td>
+                                <td>6</td>
+                                <td>30</td>
+                                <td>70</td>
+                                <td>6</td>
+                            </tr>
+
+                            <tr class="highlight">
+                                <td class="left">Net Profit (E = C - D)</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>14</td>
+                                <td>18</td>
+                                <td>5</td>
+                            </tr>
+
+                            <tr>
+                                <td class="left">P/E Ratio (F)</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                            </tr>
+
+                            <tr class="highlight">
+                                <td class="left">Share Value (G = F * E)</td>
+                                <td>250</td>
+                                <td>250</td>
+                                <td>100</td>
+                                <td>350</td>
+                                <td>450</td>
+                                <td>125</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="4" class="left highlight">
+                                    Increase in Profit & Company Value
+                                </td>
+                                <td class="red">40%</td>
+                                <td class="red">80%</td>
+                                <td class="red">25%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+
                 <!-- CARDS OF OPPORTUNITIES --------------------------------------------- -->
                 <div class="row g-0 py-5 darkGreenBG text-white">
                     <p class="text-center fade-down">Societal impact</p>
