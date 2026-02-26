@@ -76,7 +76,7 @@ p {
             font-weight: bold;
             font-size: 18px;
         }
-
+   
 
 ul {
     list-style: none;
@@ -755,15 +755,20 @@ input:focus {
         font-size: 12px;
     }
 }
+.inquiryDiv {
+    height: 300px; /* or whatever height you want */
+}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+.img-fit {
+    object-fit: cover;   /* fills div without distortion */
+}
+
 @media only screen and (min-width: 600px) {
     .inquiryDiv {
         height: 300px;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .inquiryDiv {
         height: 300px;
@@ -775,19 +780,13 @@ input:focus {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .inquiryDiv {
         height: 300px;
     }
 
-    /* .px-5{
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    } */
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .inquiryDiv {
         height: 300px;

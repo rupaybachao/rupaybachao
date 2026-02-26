@@ -236,11 +236,11 @@ verticalCarouselInner.innerHTML = data
                 <div>
                     <p>Podcast - The McKinsey Podcast</p>
                     <h1>How the best CEOs are meeting the AI moment</h1>
-                    <p>January 22, 2026 - CEOs are confronting a make-or-break test of their
-                        leadership.
-                        Here’s
-                        what
-                        successful leaders are doing to get AI right.</p>
+                    <p>What if your excess inventory could become your next growth engine?</p>
+                    <br>
+                    <p>Unlock Hidden Value. Maximize Returns. Fund Growth — Smarter.</p>
+                    <br>
+                    <p> RupayBachao helps you turn existing assets into opportunities — all through intelligent B2B barter. HEAR FIRST HAND FROM OUR FOUNDER !</p>
                 </div>
                 <div class="h-50px row g-0 d-flex align-items-end">
                     <div class="musicApps center-elements p-1 me-3">
@@ -411,8 +411,8 @@ videos.forEach(video => {
 // }
 
 const labels = [
-    "Using Rupay Bachao - 46 Months",
-    "Normal Payment - 60 Months"
+  "Using Rupay Bachao - 46 Months",
+  "Normal Payment - 60 Months"
 ];
 
 const dataValues = [46, 60];
@@ -422,55 +422,55 @@ const colors = ["#198754", "#ffc107"];
 const ctx1 = document.getElementById("loanChart").getContext("2d");
 
 const loanChart = new Chart(ctx1, {
-    type: "doughnut",
-    data: {
-        labels: labels,
-        datasets: [{
-            data: dataValues,
-            backgroundColor: colors
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: "70%",
-        plugins: {
-            legend: {
-                position: "bottom"
-            }
-        }
+  type: "doughnut",
+  data: {
+    labels: labels,
+    datasets: [{
+      data: dataValues,
+      backgroundColor: colors
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: "70%",
+    plugins: {
+      legend: {
+        position: "bottom"
+      }
     }
+  }
 });
 
 
 const ctx2 = document.getElementById("loanBarChart").getContext("2d");
 
 const loanBarChart = new Chart(ctx2, {
-    type: "bar",
-    data: {
-        labels: labels,
-        datasets: [{
-            label: "Loan Tenure (Months)",
-            data: dataValues,
-            backgroundColor: colors
-        }]
+  type: "bar",
+  data: {
+    labels: labels,
+    datasets: [{
+      label: "Loan Tenure (Months)",
+      data: dataValues,
+      backgroundColor: colors
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false
+      }
     },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Months"
-                }
-            }
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: "Months"
         }
+      }
     }
+  }
 });
