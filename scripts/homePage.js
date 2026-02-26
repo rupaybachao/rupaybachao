@@ -234,7 +234,7 @@ verticalCarouselInner.innerHTML = data
         <div class="row g-0 p-0 m-0 h-550px mx-5 d-none d-sm-flex">
             <div class="col bg-white p-5 d-flex flex-column justify-content-between">
                 <div>
-                    <p>Podcast - The RupayBachaoPodcast</p>
+                    <p>Podcast - The RupayBachao Podcast</p>
                     <h1>How the best CEOs are meeting the AI moment</h1>
                     <p>What if your excess inventory could become your next growth engine?</p>
                     <br>
