@@ -49,12 +49,14 @@ p {
 
         table {
             text-align: center;
+                margin-bottom: 0 !important;
+
         }
 
         th,
         td {
             border: 1px solid #9aa5a8 !important;
-            padding: 10px !important;
+            padding: 7px !important;
         }
 
         th {
@@ -63,7 +65,7 @@ p {
 
         .left {
             text-align: left;
-            padding-left: 10px !important;
+            padding-left: 7px !important;
         }
 
         .highlight {
@@ -76,12 +78,13 @@ p {
             font-weight: bold;
             font-size: 18px;
         }
-   
 
+
+/*         
 ul {
     list-style: none;
     padding: 0;
-}
+} */
 
 li {
     position: relative;
@@ -309,7 +312,9 @@ video {
 .btn-cursor {
     cursor: pointer !important;
 }
-
+.text-orange{
+    color: #ef711d;
+}
 .fs-40 {
     font-size: 45px;
     line-height: 1.1;
