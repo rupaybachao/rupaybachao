@@ -20,26 +20,26 @@
         }
 
         .custom-list {
-    list-style: none;
-    padding-left: 0;
-}
+            list-style: none;
+            padding-left: 0;
+        }
 
-.custom-list li {
-    position: relative;
-    padding-left: 30px;
-}
+        .custom-list li {
+            position: relative;
+            padding-left: 30px;
+        }
 
-.custom-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 15px;
-    width: 20px;
-    height: 20px;
-    background-image: url("images/dummyQR.webp");
-    background-size:cover;
-    background-repeat: no-repeat;
-}
+        .custom-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            background-image: url("images/dummyQR.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
         @media (max-width: 768px) {
             #carouselExample {
@@ -56,88 +56,52 @@
 
 <body>
 
-    <div class="container-fluid g-0 p-0 m-0">
+    <div class="container-fluid g-0">
         <!-- NAVBAR -->
         <div id="header"></div>
 
         <!-- ABOUT SECTION -->
         <div class="row g-0 py-4 px-5 fade-up">
-
-            <!-- <div class="d-flex align-items-center">
-                <p class="mb-0">ABOUT</p>
-                <div class="bg-warning mx-2" style="height:2px; width:100px;"></div>
-            </div> -->
-
             <h1 class="serif center-elements">ABOUT US</h1>
-
-
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
-                data-bs-pause="false">
-
-                <div class="carousel-inner border rounded-4 ">
-
-                    <!-- <div class="carousel-item active">
-                        <img src="./images/WhatsApp Image 2026-02-24 at 15.17.26 (1).jpeg" class="d-block w-100"
-                            alt="Building">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./images/full-shot-students-studying-indoors.jpg" class="d-block w-100"
-                            alt="Company Interior">
-                    </div> -->
-
-                    <div class="carousel-item active">
-                        <img src="./images/WhatsApp Image 2026-02-24 at 15.17.26 (2).jpeg" class="d-block w-100"
-                            alt="Office">
-                    </div>
-
-                    <!-- <div class="carousel-item">
-                        <img src="./images/innovate.jpg" class="d-block w-100"
-                            alt="Office">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="./images/rupaybachao.jpg" class="d-block w-100"
-                            alt="Office">
-                    </div> -->
-
-                </div>
-
+            <div>
+                <img src="./images/WhatsApp Image 2026-02-24 at 15.17.26 (2).jpeg" class="h-400px rounded-4 w-100"
+                    alt="Office">
             </div>
-
-            <p class="py-3">
-                RupayBachao is a dynamic digital trading platform that empowers businesses across industries to buy and
-                sell goods and services within a secure, member-only ecosystem—without cash transactions.
-            </p>
-
-            <p class="py-3">
-                Members trade seamlessly using RFT (Rupee Free Token), a cashless exchange mechanism that enables
-                businesses to increase sales, optimize inventory, and preserve cash flow. All transactions are digitally
-                recorded, ensuring transparency, security, and convenience through the RupayBachao mobile application.
-            </p>
-
-            <p class="py-3">
-                Promoted by the reputed Gold Souk Group, a four-decade-old diversified conglomerate with interests in
-                real estate, entertainment, and hospitality, RupayBachao brings credibility, strength, and vision to the
-                digital barter ecosystem.
-            </p>
-
-            <h2 class="my-3 serif fw-bold">Key Benefits</h2>
-
-            <ul class="custom-list">
-                <li>Boost sales and profitability without additional investment</li>
-                <li>Conserve cash through RFT-based trading</li>
-                <li>Access interest-free credit facility (T&C apply)</li>
-                <li>100% cashless, secure transactions</li>
-            </ul>
-            <h2 class="my-3 serif fw-bold">RupayBachao — Enabling Smart Business. Cashless Growth.</h2>
-
         </div>
+        <div class="px-5">
+        <p class="py-3">
+            RupayBachao is a dynamic digital trading platform that empowers businesses across industries to buy and
+            sell goods and services within a secure, member-only ecosystem—without cash transactions.
+        </p>
 
-        <!-- Footer -->
-        <div class="bg-dark text-white d-flex align-items-center px-4" style="height:50px;">
-            <p class="mb-0">© Copyright Rupay Bachao Ltd. All Rights Reserved</p>
+        <p class="py-3">
+            Members trade seamlessly using RFT (Rupee Free Token), a cashless exchange mechanism that enables
+            businesses to increase sales, optimize inventory, and preserve cash flow. All transactions are digitally
+            recorded, ensuring transparency, security, and convenience through the RupayBachao mobile application.
+        </p>
+
+        <p class="py-3">
+            Promoted by the reputed Gold Souk Group, a four-decade-old diversified conglomerate with interests in
+            real estate, entertainment, and hospitality, RupayBachao brings credibility, strength, and vision to the
+            digital barter ecosystem.
+        </p>
+
+        <h2 class="my-3 serif fw-bold">Key Benefits</h2>
+
+        <ul class="custom-list">
+            <li>Boost sales and profitability without additional investment</li>
+            <li>Conserve cash through RFT-based trading</li>
+            <li>Access interest-free credit facility (T&C apply)</li>
+            <li>100% cashless, secure transactions</li>
+        </ul>
+        <h2 class="my-3 serif fw-bold">RupayBachao — Enabling Smart Business. Cashless Growth.</h2>
         </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-dark text-white d-flex align-items-center px-4" style="height:50px;">
+        <p class="mb-0">© Copyright Rupay Bachao Ltd. All Rights Reserved</p>
+    </div>
 
     </div>
 

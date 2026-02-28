@@ -11,70 +11,69 @@
 </head>
 
 <body>
+    <div class="container-fluid g-0">
+        <div id="header"></div>
     <div class="row p-4 orangeGradient-bg g-0 w-100 d-flex justify-content-center align-items-center">
-                    <h6 class="text-center text-white pb-5">customer reviews</h6>
+        <h6 class="text-center text-white pb-5">customer reviews</h6>
 
-                    <div class="col-12 reviews">
+        <div class="center-elements " >
 
-                        <div id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel"
-                            data-bs-interval="3000" data-bs-pause="false">
+            <div id="carouselExample" class="carousel slide w-75" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-pause="false">
 
-                            <div class="carousel-inner">
+                <div class="carousel-inner">
 
-                                <!-- Slide 1 (2 Videos) -->
-                                <div class="carousel-item active">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 text-center">
-                                            <video class="w-100" controls>
-                                                <source src="./videos/WhatsApp Video 2026-02-19 at 11.45.41 (1).mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <video class="w-100" controls>
-                                                <source src="./videos/WhatsApp Video 2026-02-19 at 11.45.41 (2).mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 (2 Videos) -->
-                                <div class="carousel-item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 text-center">
-                                            <video class="w-100" controls>
-                                                <source src="./videos/WhatsApp Video 2026-02-19 at 11.45.41.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <video class="w-100" controls>
-                                                <source src="./videos/WhatsApp Video 2026-02-19 at 11.45.42.mp4"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="center-elements ">
+                            <div class="text-center ">
+                                <video class="rounded-4 object-fit-cover carouselItem" controls>
+                                    <source src="./videos/review1.mp4"
+                                        type="video/mp4">
+                                </video>
                             </div>
-
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-
                         </div>
+                    </div>
 
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="center-elements ">
+                            <div class="text-center ">
+                                <video class="rounded-4 object-fit-cover carouselItem" controls>
+                                    <source src="./videos/review2.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="center-elements ">
+                            <div class="text-center ">
+                                <video class="rounded-4 object-fit-cover carouselItem" controls>
+                                    <source src="./videos/review3.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
 </body>
 
 <script src="./scripts/homePage.js"></script>

@@ -79,12 +79,10 @@ p {
             font-size: 18px;
         }
 
-
-/*         
-ul {
-    list-style: none;
-    padding: 0;
-} */
+.carouselItem{
+    height: 600px !important;
+    width: 600px !important; 
+}
 
 li {
     position: relative;
