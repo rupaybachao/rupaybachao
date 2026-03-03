@@ -80,8 +80,8 @@ p {
         }
 
 .carouselItem{
-    height: 600px !important;
-    width: 600px !important; 
+    height: 350px !important;
+    width: 400px!important; 
 }
 
 li {
@@ -455,11 +455,11 @@ video {
 }
 
 .darkOrangeBG {
-    background-color: #4b2b01;
+background: linear-gradient(to bottom, #b6966b, #4e2e05);
 }
 
 .darkGreenBG {
-    background-color: #408741;
+ background: linear-gradient(to bottom, #408741, #c2efc5, );
 }
 
 .custom-indicators {
@@ -528,6 +528,7 @@ video {
 
 .opportunityCard:hover {
     background-color: white;
+    border-radius: 12px;
 }
 
 .text-white-black {
@@ -564,6 +565,10 @@ video {
 
 .h-50px {
     height: 50px;
+}
+
+.h-30px {
+    height: 30px;
 }
 
 .w-500px {
@@ -794,4 +799,273 @@ input:focus {
     .inquiryDiv {
         height: 300px;
     }
+}
+
+/* added css om 03-03-2026*/
+.by-leverage{
+    font-style: italic;
+    font-size: 24px;
+}
+
+.custom-radius {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 8px;
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+
+
+
+
+.news-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #ebe7e7;
+  padding: 50px 0px 30px 0px;
+}
+
+.news-card {
+  position: relative;
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  background: #000;
+}
+
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Dark gradient overlay at bottom */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.meta {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .news-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+
+
+
+
+
+.contact-section {
+  padding: 60px 5%;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE */
+.left-section {
+  flex: 1;
+}
+
+.left-section h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.orange {
+  background: #f68b1f;
+}
+
+.blue {
+  background: #3c63b8;
+}
+
+.info-box h4 {
+  color: #f68b1f;
+  margin-bottom: 6px;
+}
+
+.info-box p {
+  color: #555;
+  font-size: 18px;
+}
+
+.link {
+  color: #3c63b8;
+  cursor: pointer;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  flex: 1;
+}
+
+.right-section h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  background: #f9f9f9;
+  transition: 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #f68b1f;
+  background: #fff;
+}
+
+/* Floating Button */
+
+.info-card {
+  background: #FFFFFF;
+  padding: 30px 40px;
+  max-width: 800px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* Email Orange Box */
+.orange {
+  background: #f68b1f;
+}
+
+/* Address Icon Style */
+.address-icon {
+  background: linear-gradient(135deg, #f68b1f 50%, #3c63b8 50%);
+  border-radius: 50%;
+}
+
+.info-content h4 {
+  font-size: 22px;
+  color: #f68b1f;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-content p {
+  font-size: 20px;
+  color: #555;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #d3d3d3;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
 }
