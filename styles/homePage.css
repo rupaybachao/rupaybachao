@@ -80,13 +80,18 @@ p {
         }
 
 .carouselItem{
-    height: 450px !important;
-    width: 700px!important; 
+    height: 400px !important;
+    width: 600px!important; 
 }
 .bg-lightGreen{
     background-color: #91b184;
 }
-
+.WhiteCloseBtn{
+    filter: invert(1);
+}
+.modal-xl{
+    width: 60% !important;
+}
 .bgShadow{
     box-shadow: 10px 10px 10px rgba(39, 39, 39, 0.573);
 }
