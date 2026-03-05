@@ -179,12 +179,41 @@
                             <p class="ps-4 fst-italic">What if your excess inventory could become your next growth
                                 engine?</p>
                             <p class="ps-4 fst-italic">Unlock Hidden Value. Maximize Returns. Fund Growth — Smarter.</p>
-                            <button class="w-200px btn rounded-0 h-45px bg-white my-5">
+                            <button class="w-200px btn rounded-0 h-45px bg-white my-5" type="button"
+                                data-bs-toggle="modal" data-bs-target="#litsenHereModal">
                                 Litsen here
                                 <img class="h-20px mx-2" src="./images/next.png" alt="next">
                             </button>
                         </div>
+                        
                     </div>
+                    <div class="modal fade" id="litsenHereModal" tabindex="-1"
+                            aria-labelledby="litsenHereModalLabel" aria-hidden="true" >
+                            <div class="modal-dialog modal-xl modal-dialog-centered">
+                                <div class="modal-content h-350px" >
+                                    <div class="h-100 center-elements">
+                                        <div class="row g-0 w-90">
+                                            <div class="col bg-white py-5 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <div>
+                                                        <p class="fs-4 fs-oblique">HEAR FIRST HAND FROM OUR YOUNG FOUNDER, ISHIKA GUPTA !</p>
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 center-elements bg-black">
+                                                <div class="video-wrapper position-relative">
+                                                    <video id="myVideo" controls="true">
+                                                        <source src="./videos/ishikasVideo.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <div class="row g-0 p-0 m-0">
                         <!-- VERTICAL MUSIC DIV CAROUSEL HIDDEN ONLY ON SMALL SCREEN---------------------------------- -->
                         <div class="h-auto mb-5 justify-content-center d-none d-md-block">
@@ -315,29 +344,30 @@
                 </div>
 
                 <!-- SECTION 3 with GRADIENT PODCAST VIDEO SERIES ------------------------------- -->
-                <div class="darkGreenBG pt-5 px-5">
+                <div class="darkOrangeBG pt-5 px-5">
                     <div class="row g-0 p-0 px-5">
                         <div class=" m-0 p-0 text-white fade-up">
-                            <h2 class="serif fw-semibold p-0 m-0 d-flex justify-content-start">FROM IDLE INVENTORY TO
-                                INCREASED REVENUE</h2><br/>
-                           </div>
+                            <h2 class="serif fw-semibold p-0 m-0 center-elements ">FROM IDLE INVENTORY TO
+                                INCREASED REVENUE</h2><br />
+                        </div>
                     </div>
                     <div class="row g-0 p-0 m-0">
                         <!-- VERTICAL MUSIC DIV CAROUSEL HIDDEN ONLY ON SMALL SCREEN---------------------------------- -->
                         <div id="audioVerticalCarousel"
                             class="carousel slide h-auto mb-5 justify-content-center d-none d-md-block">
                             <div class="h-100 ">
-                                <div class="row g-0 p-0 m-0 h-auto mx-5 d-none d-sm-flex custom-radius">
-                                    <div class="col bg-white p-5 d-flex flex-column justify-content-between">
+                                <div class="row g-0 p-0 m-0 bgShadow h-auto mx-5 d-none d-sm-flex custom-radius">
+                                    <div class="col-6 bg-white p-5 d-flex flex-column justify-content-between">
                                         <div>
-                                             <p class="fst-italic pb-4">Maximise every asset. Multiply your profit!!</p>
-                                            <div class="by-leverage">"By leveraging existing inventory, a minor boost in sales delivers major  profit impact."</div>
+                                            <p class="fst-italic pb-4">Maximise every asset. Multiply your profit!!</p>
+                                            <div class="by-leverage">"By leveraging existing inventory, a minor boost in
+                                                sales delivers major profit impact."</div>
                                             <br>
                                         </div>
                                     </div>
 
-                                    <div class="col-6 center-elements h-100">
-                                        <div class="table-responsive h-100 w-100">
+                                    <div class="col-6 center-elements h-100 bg-white">
+                                        <div class="table-responsive h-100 w-100 border3d rounded-3">
                                             <table class="table table-dark">
                                                 <tr class="fs-13px">
                                                     <th rowspan="2">Particular</th>
@@ -506,42 +536,47 @@
                 </div>
 
                 <!-- CARDS OF HELPING CLIENTS  --------------------------------------------- -->
-                <div class="row g-0 py-5 h-auto darkOrangeBG text-white">
-                    <p class="text-center fade-down fst-italic"> how we help clients </p>
+                <div class="row g-0 py-5 h-auto bg-lightGreen text-white">
                     <div class="col center-elements fade-down">
                         <h1 class="text-center col-7">
                             "Opportunities don’t wait. Neither should you.”
                         </h1>
                     </div>
-                    <div class="p-4 row g-0 p-0 fade-down">
-                        <div class="col-lg-4 col-md-6 col-sm-12 h-auto  opportunityCard p-3">
+                    <div class="p-4 row g-0 p-0 fade-down h-450px">
+                        <div class="col-lg-4 col-md-6 col-sm-12 h-100  opportunityCard p-3">
                             <a href="successstories.html" class="text-decoration-none">
-                            <div class="h-50">
-                                <img class="h-100 w-100" src="./images/successStories.jpg" alt="" style="border-radius: 12px;">
-                            </div>
-                            <div class="text-white-black d-flex flex-column justify-content-center" style="padding-top: 30px;">
-                                <h4> SUCCESS STORY</h4>
-                                <p>Our clients business grows & we feel happy.<br/> "HAPPY CLIENTS HAPPY US"</p>
-                            </div>
+                                <div class="h-50">
+                                    <img class="h-100 w-100" src="./images/successStories.jpg" alt=""
+                                        style="border-radius: 12px;">
+                                </div>
+                                <div class="text-white-black d-flex flex-column justify-content-center"
+                                    style="padding-top: 30px;">
+                                    <h4> SUCCESS STORY</h4>
+                                    <p>Our clients business grows & we feel happy.<br /> "HAPPY CLIENTS HAPPY US"</p>
+                                </div>
                             </a>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 h-auto  opportunityCard p-3">
+                        <div class="col-lg-4 col-md-6 col-sm-12 h-100  opportunityCard p-3">
                             <a href="businesscategories.html" class="text-decoration-none">
-                            <div class="h-50">
-                                <img class="h-100 w-100" src="./images/businessCategories.jpg" alt="" style="border-radius: 12px;">
-                            </div>
-                            <div class="text-white-black d-flex flex-column justify-content-center" style="padding-top: 30px;">
-                                <h4>BUSINESS CATEGORIES</h4>
-                                <p>"Barter Marketplace, Trade Goods, Preserve Value"</p>
-                            </div>
+                                <div class="h-50">
+                                    <img class="h-100 w-100" src="./images/businessCategories.jpg" alt=""
+                                        style="border-radius: 12px;">
+                                </div>
+                                <div class="text-white-black d-flex flex-column justify-content-center"
+                                    style="padding-top: 30px;">
+                                    <h4>BUSINESS CATEGORIES</h4>
+                                    <p>"Barter Marketplace, Trade Goods, Preserve Value"</p>
+                                </div>
                             </a>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 h-auto  opportunityCard p-3">
+                        <div class="col-lg-4 col-md-6 col-sm-12 h-100  opportunityCard p-3">
                             <a href="associatedbrands.html" class="text-decoration-none">
                                 <div class="h-50">
-                                    <img class="h-100 w-100" src="./images/homepageBgimage4.jpg" alt="" style="border-radius: 12px;">
+                                    <img class="h-100 w-100" src="./images/homepageBgimage4.jpg" alt=""
+                                        style="border-radius: 12px;">
                                 </div>
-                                <div class="text-white-black d-flex flex-column justify-content-center" style="padding-top: 30px;">
+                                <div class="text-white-black d-flex flex-column justify-content-center"
+                                    style="padding-top: 30px;">
                                     <h4>ASSOCIATED BRANDS</h4>
                                     <p>"Smart growth with minimal investment</p>
                                 </div>
@@ -836,20 +871,20 @@
                 </div> -->
                 <!-- APPLICATION QR AND  DOWNLOAD LINKS ----------------------------------- -->
                 <div class="row g-0 bg-white p-4">
-                    <a href="index.html" class="d-inline-block">
-                <img src="./images/rupayBachaoLogo.png" alt="RupeyBachao Logo" style="height:50px;">
-            </a>
+                    <a href="index.html" class="center-elements">
+                        <img src="./images/logoText.png" alt="RupeyBachao Logo" style="height:80px;">
+                    </a>
                     <!-- <div class="center-elements py-3">
                         <h2 class="text-center fst-italic text-orange">RUPAY BACHAO</h2>
                         <p >earn it, spend it, save it</p>
                     </div> -->
                     <div class="center-elements">
-                        <div class="col-lg-2 col-md-4 col-sm-12">
+                        <div class="col-lg-1 col-md-4 col-sm-12">
                             <img class="h-150px " src="./images/qr-code.png" alt="Qr code">
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <h1 class="fw-light fw-bold" style="font-size: 28px;">
-                                Download the <br/>RupayBachao
+                                Download the <br />RupayBachao
                             </h1>
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="btn p-0">

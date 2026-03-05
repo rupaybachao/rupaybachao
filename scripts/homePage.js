@@ -388,8 +388,40 @@ const loanChart = new Chart(ctx1, {
     }
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
 
+    const carouselElement = document.querySelector("#successStoriesCarousel");
+    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
 
+    const videos = carouselElement.querySelectorAll("video");
+
+    videos.forEach(video => {
+
+        // stop carousel when video plays
+        video.addEventListener("play", () => {
+            carousel.pause();
+        });
+
+        // start carousel again when video pauses
+        video.addEventListener("pause", () => {
+            carousel.cycle();
+        });
+
+        // start carousel again when video finishes
+        video.addEventListener("ended", () => {
+            carousel.cycle();
+        });
+
+    });
+
+    // pause any playing video when slide changes
+    carouselElement.addEventListener("slide.bs.carousel", () => {
+        videos.forEach(video => {
+            video.pause();
+        });
+    });
+
+});
 const ctx2 = document.getElementById("loanBarChart").getContext("2d");
 
 const loanBarChart = new Chart(ctx2, {
@@ -421,10 +453,3 @@ const loanBarChart = new Chart(ctx2, {
     }
   }
 });
-
-
-
-
-function toSuccessStories(){
-  
-}

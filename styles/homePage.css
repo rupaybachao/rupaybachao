@@ -80,8 +80,15 @@ p {
         }
 
 .carouselItem{
-    height: 350px !important;
-    width: 400px!important; 
+    height: 450px !important;
+    width: 700px!important; 
+}
+.bg-lightGreen{
+    background-color: #91b184;
+}
+
+.bgShadow{
+    box-shadow: 10px 10px 10px rgba(39, 39, 39, 0.573);
 }
 
 li {
@@ -89,7 +96,9 @@ li {
     padding-left: 2em;
     margin-bottom: 0.5em;
 }
-
+.fs-oblique{
+    font-style: oblique !important;
+}
 li::before {
     content: '';
     position: absolute;
@@ -140,7 +149,7 @@ li::before {
 }
 
 .navPageList {
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .offcanvas .nav-link {
@@ -176,6 +185,9 @@ video {
 
 .w-60 {
     width: 60% !important;
+}
+.w-65 {
+    width: 65% !important;
 }
 
 .w-90 {
