@@ -1088,7 +1088,7 @@ hr {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
     p {
         font-size: 12px !important;
     }
@@ -1099,7 +1099,7 @@ hr {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 300px) {
     /* p {
         font-size: 16px !important;
     } */
@@ -1114,6 +1114,13 @@ hr {
     }
 }
 
+/* Medium devices (landscape tablets, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .my-px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .my-px-5 {

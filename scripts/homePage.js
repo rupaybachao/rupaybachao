@@ -7,33 +7,48 @@ document.addEventListener("DOMContentLoaded", function () {
       setActiveLink();
     });
 
-  const carouselElement2 = document.querySelector("#successStoriesCarousel");
-  if (carouselElement2) {
-    const carousel2 = bootstrap.Carousel.getOrCreateInstance(carouselElement2);
-    const videos2 = carouselElement2.querySelectorAll("video");
+  const carouselElement = document.getElementById("successStoriesCarousel");
 
-    videos2.forEach(video => {
+    const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: false,
+        ride: false
+    });
 
-      video.addEventListener("play", () => {
-        carousel2.pause();
-      });
+    let autoScroll;
 
-      video.addEventListener("pause", () => {
-        carousel2.cycle();
-      });
+    function startCarousel() {
+        autoScroll = setInterval(() => {
+            carousel.next();
+        }, 3000);
+    }
 
-      video.addEventListener("ended", () => {
-        carousel2.cycle();
-      });
+    function stopCarousel() {
+        clearInterval(autoScroll);
+    }
+
+    startCarousel();
+
+    const videos = carouselElement.querySelectorAll("video");
+
+    videos.forEach(video => {
+
+        video.addEventListener("play", () => {
+            stopCarousel();   // stop when video plays
+        });
+
+        video.addEventListener("pause", () => {
+            startCarousel();  // resume when paused
+        });
+
+        video.addEventListener("ended", () => {
+            startCarousel();  // resume when ended
+        });
 
     });
 
-    carouselElement2.addEventListener("slide.bs.carousel", () => {
-      videos2.forEach(video => {
-        video.pause();
-      });
+    carouselElement.addEventListener("slide.bs.carousel", () => {
+        videos.forEach(video => video.pause());
     });
-  }
 
 });
 
