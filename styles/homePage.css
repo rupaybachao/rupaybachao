@@ -1124,13 +1124,12 @@ hr {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .container {
+    /* .container {
         flex-direction: column;
     }
-
     .form-row {
         flex-direction: column;
-    }
+    } */
     .my-px-5 {
         padding-left: 2rem !important;
         padding-right: 2rem !important;
