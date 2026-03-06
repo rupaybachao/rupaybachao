@@ -1,19 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   fetch("./navbar.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  fetch("./navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
       setActiveLink();
     });
+
+  const carouselElement2 = document.querySelector("#successStoriesCarousel");
+  if (carouselElement2) {
+    const carousel2 = bootstrap.Carousel.getOrCreateInstance(carouselElement2);
+    const videos2 = carouselElement2.querySelectorAll("video");
+
+    videos2.forEach(video => {
+
+      video.addEventListener("play", () => {
+        carousel2.pause();
+      });
+
+      video.addEventListener("pause", () => {
+        carousel2.cycle();
+      });
+
+      video.addEventListener("ended", () => {
+        carousel2.cycle();
+      });
+
+    });
+
+    carouselElement2.addEventListener("slide.bs.carousel", () => {
+      videos2.forEach(video => {
+        video.pause();
+      });
+    });
+  }
 
 });
 
@@ -69,66 +89,6 @@ const observer1 = new IntersectionObserver(
 
 fadeDownElements.forEach((el) => observer1.observe(el));
 
-/* ===========================
-   HORIZONTAL MUSIC CAROUSEL FIX
-=========================== */
-
-const horizontalCarousel = document.querySelector(".carousel");
-
-if (horizontalCarousel) {
-  horizontalCarousel.addEventListener("slide.bs.carousel", function () {
-    const allAudios = horizontalCarousel.querySelectorAll("audio");
-    allAudios.forEach((audio) => {
-      audio.pause();
-      audio.currentTime = 0;
-    });
-
-    const allButtons = horizontalCarousel.querySelectorAll("#playPauseButton");
-    allButtons.forEach((btn) => {
-      btn.src = "./images/play-white.png";
-    });
-
-    const allWaves = horizontalCarousel.querySelectorAll("#wave");
-    allWaves.forEach((wave) => {
-      wave.classList.remove("active");
-      wave.style.display = "none";
-    });
-  });
-  horizontalCarousel.addEventListener("click", function (e) {
-    if (e.target.id === "playPauseButton") {
-      const currentSlide = e.target.closest(".carousel-item");
-
-      const audio = currentSlide.querySelector("audio");
-      const wave = currentSlide.querySelector("#wave");
-      const button = e.target;
-
-      if (audio.paused) {
-        const allAudios = horizontalCarousel.querySelectorAll("audio");
-        allAudios.forEach((a) => {
-          a.pause();
-          a.currentTime = 0;
-        });
-
-        const allButtons =
-          horizontalCarousel.querySelectorAll("#playPauseButton");
-        allButtons.forEach((btn) => {
-          btn.src = "./images/play-white.png";
-        });
-
-        audio.play();
-        button.src = "./images/pause-white.png";
-
-        wave.style.display = "flex";
-        wave.classList.add("active");
-      } else {
-        audio.pause();
-        button.src = "./images/play-white.png";
-
-        wave.classList.remove("active");
-      }
-    }
-  });
-}
 
 const data = [
   {
@@ -223,233 +183,3 @@ carouselInner.innerHTML = data
   )
   .join("");
 
-const verticalCarouselInner = document.getElementById(
-  "audioVerticalCarouselInner",
-);
-
-// verticalCarouselInner.innerHTML = data
-//   .map(
-//     (item, index) => `
-   
-//     `,
-//   )
-//   .join("");
-
-const video = document.getElementById("myVideo");
-
-function playVideo() {
-  var pausePlayButton = document.getElementById("playPauseButton");
-  if (video.paused) {
-    video.play();
-    playPauseButton.src = "./images/pause-white.png";
-  } else {
-    video.pause();
-    playPauseButton.src = "./images/play-white.png";
-  }
-}
-
-function forward() {
-  video.currentTime += 5;
-}
-
-function backward() {
-  video.currentTime -= 5;
-}
-
-
-const carouselElement = document.getElementById('carouselExample');
-const carousel = new bootstrap.Carousel(carouselElement, {
-  interval: 3000,
-  ride: 'carousel'
-});
-
-const videos = carouselElement.querySelectorAll('video');
-
-videos.forEach(video => {
-
-  video.addEventListener('play', () => {
-    carousel.pause();
-  });
-
-  video.addEventListener('pause', () => {
-    carousel.cycle();
-  });
-
-  video.addEventListener('ended', () => {
-    carousel.cycle();
-  });
-
-});
-
-
-// let myChart = null;
-
-// function calculateLoan() {
-
-//     let loanInput = document.getElementById("loanAmount");
-//     let monthInput = document.getElementById("months");
-//     let interestInput = document.getElementById("interest");
-
-//     let P = parseFloat(loanInput.value);
-//     let totalMonths = parseInt(monthInput.value);
-//     let annualRate = parseFloat(interestInput.value);
-
-//     if (!P || P <= 0) {
-//         P = 1;
-//         loanInput.value = 1;
-//     }
-
-//     if (!totalMonths || totalMonths <= 0) {
-//         totalMonths = 1;
-//         monthInput.value = 1;
-//     }
-
-//     if (annualRate === "" || annualRate < 0) {
-//         annualRate = 1;
-//         interestInput.value = 1;
-//     }
-
-//     let r = annualRate / 12 / 100;
-//     let EMI, totalInterest, totalPayment;
-
-//     if (annualRate === 0) {
-//         EMI = P / totalMonths;
-//         totalInterest = 0;
-//         totalPayment = P;
-//     } else {
-//         let power = Math.pow(1 + r, totalMonths);
-//         EMI = (P * r * power) / (power - 1);
-//         totalPayment = EMI * totalMonths;
-//         totalInterest = totalPayment - P;
-//     }
-
-//     const ctx = document.getElementById("loanChart").getContext("2d");
-
-//     if (myChart) {
-//         myChart.destroy();
-//     }
-
-//     myChart = new Chart(ctx, {
-//         type: "doughnut",
-//         data: {
-//             labels: ["Principal Amount", "Total Interest"],
-//             datasets: [{
-//                 data: [P, totalInterest],
-//                 backgroundColor: ["#ffc107", "#198754"]
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             maintainAspectRatio: false,
-//             cutout: "65%",
-//             plugins: {
-//                 legend: {
-//                     position: "bottom"
-//                 }
-//             }
-//         }
-//     });
-
-//     document.getElementById("resultBox").innerHTML = `
-//         <div>Monthly EMI:<br>${EMI.toFixed(0)}</div>
-//         <div>Total Interest:<br>${totalInterest.toFixed(0)}</div>
-//         <div>Total Payment:<br>${totalPayment.toFixed(0)}</div>
-//     `;
-// }
-
-const labels = [
-  "Using Rupay Bachao - 46 Months",
-  "Normal Payment - 60 Months"
-];
-
-const dataValues = [46, 60];
-
-const colors = ["#198754", "#ffc107"];
-
-const ctx1 = document.getElementById("loanChart").getContext("2d");
-
-const loanChart = new Chart(ctx1, {
-  type: "doughnut",
-  data: {
-    labels: labels,
-    datasets: [{
-      data: dataValues,
-      backgroundColor: colors
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    cutout: "70%",
-    plugins: {
-      legend: {
-        position: "bottom"
-      }
-    }
-  }
-});
-document.addEventListener("DOMContentLoaded", function () {
-
-    const carouselElement = document.querySelector("#successStoriesCarousel");
-    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
-
-    const videos = carouselElement.querySelectorAll("video");
-
-    videos.forEach(video => {
-
-        // stop carousel when video plays
-        video.addEventListener("play", () => {
-            carousel.pause();
-        });
-
-        // start carousel again when video pauses
-        video.addEventListener("pause", () => {
-            carousel.cycle();
-        });
-
-        // start carousel again when video finishes
-        video.addEventListener("ended", () => {
-            carousel.cycle();
-        });
-
-    });
-
-    // pause any playing video when slide changes
-    carouselElement.addEventListener("slide.bs.carousel", () => {
-        videos.forEach(video => {
-            video.pause();
-        });
-    });
-
-});
-const ctx2 = document.getElementById("loanBarChart").getContext("2d");
-
-const loanBarChart = new Chart(ctx2, {
-  type: "bar",
-  data: {
-    labels: labels,
-    datasets: [{
-      label: "Loan Tenure (Months)",
-      data: dataValues,
-      backgroundColor: colors
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false
-      }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: "Months"
-        }
-      }
-    }
-  }
-});
