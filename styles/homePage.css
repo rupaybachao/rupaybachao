@@ -1,11 +1,16 @@
 /* body {
     height: 100vh;
 } */
-
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%; /* Prevents Safari from auto-adjusting text size */
+}
 .BackgroundBody {
     background: linear-gradient(135deg, #0f7c3ba9, #9b7a1e81, #fc6b0378);
     margin: 0 !important;
     padding: 0 !important;
+    width: 100%;
 }
 
 p {
