@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("THIS IS THE WIDTH ", window.innerWidth);
     console.log("THIS IS THE CLIENT WIDTH ", document.documentElement.clientWidth);
-    console.log("THIS IS THE HEIGHT ", window.innerHeight); // Add this to check height
-
+    console.log("THIS IS THE HEIGHT ", window.innerHeight);
+    console.log("THIS IS DOCUMENT HEIGHT ", document.documentElement.scrollHeight);
+    
+    // Check all containers that might affect height
+    const containers = document.querySelectorAll('.container-fluid, .row, [class*="col-"]');
+    containers.forEach((el, index) => {
+        console.log(`Element ${index}:`, el.className, 'Height:', el.offsetHeight);
+    });
     // Safari height fix
     function fixSafariHeight() {
         // Force recalculation of heights
