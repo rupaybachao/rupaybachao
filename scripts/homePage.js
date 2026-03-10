@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("THIS IS THE WIDTH ",window.innerWidth);
+    console.log("THIS IS THE CLIENT WIDTH ",document.documentElement.clientWidth);
+
   fetch("navbar.html")
     .then((response) => response.text())
     .then((data) => {
@@ -7,48 +9,48 @@ document.addEventListener("DOMContentLoaded", function () {
       setActiveLink();
     });
 
-  const carouselElement = document.getElementById("successStoriesCarousel");
+  // const carouselElement = document.getElementById("successStoriesCarousel");
 
-    const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: false,
-        ride: false
-    });
+  //   const carousel = new bootstrap.Carousel(carouselElement, {
+  //       interval: false,
+  //       ride: false
+  //   });
 
-    let autoScroll;
+  //   let autoScroll;
 
-    function startCarousel() {
-        autoScroll = setInterval(() => {
-            carousel.next();
-        }, 3000);
-    }
+  //   function startCarousel() {
+  //       autoScroll = setInterval(() => {
+  //           carousel.next();
+  //       }, 3000);
+  //   }
 
-    function stopCarousel() {
-        clearInterval(autoScroll);
-    }
+  //   function stopCarousel() {
+  //       clearInterval(autoScroll);
+  //   }
 
-    startCarousel();
+  //   startCarousel();
 
-    const videos = carouselElement.querySelectorAll("video");
+  //   const videos = carouselElement.querySelectorAll("video");
 
-    videos.forEach(video => {
+  //   videos.forEach(video => {
 
-        video.addEventListener("play", () => {
-            stopCarousel();   // stop when video plays
-        });
+  //       video.addEventListener("play", () => {
+  //           stopCarousel();   // stop when video plays
+  //       });
 
-        video.addEventListener("pause", () => {
-            startCarousel();  // resume when paused
-        });
+  //       video.addEventListener("pause", () => {
+  //           startCarousel();  // resume when paused
+  //       });
 
-        video.addEventListener("ended", () => {
-            startCarousel();  // resume when ended
-        });
+  //       video.addEventListener("ended", () => {
+  //           startCarousel();  // resume when ended
+  //       });
 
-    });
+  //   });
 
-    carouselElement.addEventListener("slide.bs.carousel", () => {
-        videos.forEach(video => video.pause());
-    });
+  //   carouselElement.addEventListener("slide.bs.carousel", () => {
+  //       videos.forEach(video => video.pause());
+  //   });
 
 });
 
