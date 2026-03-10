@@ -923,12 +923,12 @@ input:focus {
     padding: 60px 5%;
 }
 
-.container {
+/* .container {
     display: flex;
     gap: 60px;
     align-items: flex-start;
     justify-content: space-between;
-}
+} */
 
 /* LEFT SIDE */
 .left-section {
