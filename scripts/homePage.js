@@ -2,55 +2,63 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("THIS IS THE WIDTH ",window.innerWidth);
     console.log("THIS IS THE CLIENT WIDTH ",document.documentElement.clientWidth);
 
-  fetch("navbar.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header").innerHTML = data;
+ fetch("navbar.html")
+  .then((response) => response.text())
+  .then((data) => {
+    const header = document.getElementById("header");
+
+    if (header) {
+      header.innerHTML = data;
+
       setActiveLink();
+
+      // Recalculate layout
+      window.dispatchEvent(new Event("resize"));
+    }
+  });
+
+  const carouselElement = document.getElementById("successStoriesCarousel");
+
+    const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: false,
+        ride: false
     });
 
-  // const carouselElement = document.getElementById("successStoriesCarousel");
+    let autoScroll;
 
-  //   const carousel = new bootstrap.Carousel(carouselElement, {
-  //       interval: false,
-  //       ride: false
-  //   });
+    function startCarousel() {
+        autoScroll = setInterval(() => {
+            carousel.next();
+        }, 3000);
+    }
 
-  //   let autoScroll;
+    function stopCarousel() {
+        clearInterval(autoScroll);
+    }
 
-  //   function startCarousel() {
-  //       autoScroll = setInterval(() => {
-  //           carousel.next();
-  //       }, 3000);
-  //   }
+    startCarousel();
 
-  //   function stopCarousel() {
-  //       clearInterval(autoScroll);
-  //   }
+    const videos = carouselElement.querySelectorAll("video");
 
-  //   startCarousel();
+    videos.forEach(video => {
 
-  //   const videos = carouselElement.querySelectorAll("video");
+        video.addEventListener("play", () => {
+            stopCarousel();   // stop when video plays
+        });
 
-  //   videos.forEach(video => {
+        video.addEventListener("pause", () => {
+            startCarousel();  // resume when paused
+        });
 
-  //       video.addEventListener("play", () => {
-  //           stopCarousel();   // stop when video plays
-  //       });
+        video.addEventListener("ended", () => {
+            startCarousel();  // resume when ended
+        });
 
-  //       video.addEventListener("pause", () => {
-  //           startCarousel();  // resume when paused
-  //       });
+    });
 
-  //       video.addEventListener("ended", () => {
-  //           startCarousel();  // resume when ended
-  //       });
-
-  //   });
-
-  //   carouselElement.addEventListener("slide.bs.carousel", () => {
-  //       videos.forEach(video => video.pause());
-  //   });
+    carouselElement.addEventListener("slide.bs.carousel", () => {
+        videos.forEach(video => video.pause());
+    });
 
 });
 
@@ -112,37 +120,25 @@ const data = [
     image: "./images/homepageBgimage1.jpg",
     podccastDescription: " my description ",
     audio: "./audios/audio",
-    podcastName: "mypodcast",
-    ituneLink: "",
-    spotifyLink: "",
-    ytLink: "",
+    podcastName: "mypodcast"
   },
   {
     image: "./images/homepageBgimage2.jpg",
     podccastDescription: " my description ",
     audio: "./audios/audio",
-    podcastName: "mypodcast",
-    ituneLink: "",
-    spotifyLink: "",
-    ytLink: "",
+    podcastName: "mypodcast"
   },
   {
     image: "./images/homepageBgimage3.jpg",
     podccastDescription: " my description ",
     audio: "./audios/audio",
-    podcastName: "mypodcast",
-    ituneLink: "",
-    spotifyLink: "",
-    ytLink: "",
+    podcastName: "mypodcast"
   },
   {
     image: "./images/homepageBgimage4.jpg",
     podccastDescription: " my description ",
     audio: "./audios/audio",
-    podcastName: "mypodcast",
-    ituneLink: "",
-    spotifyLink: "",
-    ytLink: "",
+    podcastName: "mypodcast"
   },
 ];
 
