@@ -1,10 +1,9 @@
-body {
+/* body {
     height: 100vh;
-}
+} */
 
 .BackgroundBody {
     background: linear-gradient(135deg, #0f7c3ba9, #9b7a1e81, #fc6b0378);
-
     margin: 0 !important;
     padding: 0 !important;
 }
