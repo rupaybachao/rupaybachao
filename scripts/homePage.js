@@ -15,7 +15,7 @@ function loadNavbar() {
     const header = document.getElementById("header");
     
     if (!header) {
-        console.error("Header element not found!");
+        // console.error("Header element not found!");
         return;
     }
     fetch("navbar.html")
@@ -33,7 +33,7 @@ function loadNavbar() {
 
         })
         .catch((error) => {
-            console.error("Error loading navbar:", error);
+            // console.error("Error loading navbar:", error);
             header.innerHTML = '<nav class="navbar mckNavbar"><div class="container-fluid"><div class="text-danger text-center w-100 p-3">Error loading navigation. Please refresh.</div></div></nav>';
         });
 }
@@ -110,7 +110,7 @@ function setActiveLink() {
         currentPage = "index.html";
     }
 
-    console.log("Setting active link for page:", currentPage);
+    // console.log("Setting active link for page:", currentPage);
 
     const links = document.querySelectorAll(".navDropdownText, .nav-link");
     let activeFound = false;
@@ -133,20 +133,20 @@ function setActiveLink() {
         }
     });
 
-    console.log(activeFound ? "Active link set" : "No matching link found");
+    // console.log(activeFound ? "Active link set" : "No matching link found");
 }
 
 function initializeSuccessStoriesCarousel() {
     const carouselElement = document.getElementById("successStoriesCarousel");
     if (!carouselElement) {
-        console.log("Success stories carousel not found");
+        // console.log("Success stories carousel not found");
         return;
     }
 
     try {
         // Check if bootstrap is available
         if (typeof bootstrap === 'undefined') {
-            console.error("Bootstrap not available for carousel");
+            // console.error("Bootstrap not available for carousel");
             return;
         }
 
@@ -169,14 +169,14 @@ function initializeSuccessStoriesCarousel() {
                     console.error("Carousel next error:", e);
                 }
             }, 3000);
-            console.log("Carousel auto-scroll started");
+            // console.log("Carousel auto-scroll started");
         }
 
         function stopCarousel() {
             if (autoScroll) {
                 clearInterval(autoScroll);
                 autoScroll = null;
-                console.log("Carousel auto-scroll stopped");
+                // console.log("Carousel auto-scroll stopped");
             }
         }
 
