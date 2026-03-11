@@ -896,7 +896,8 @@ hr {
 .info-card {
     background: #FFFFFF;
     padding: 30px 40px;
-    max-width: 800px;
+    height: auto;
+    /* max-width: 800px; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
@@ -924,14 +925,14 @@ hr {
 }
 
 .info-content h4 {
-    font-size: 22px;
+    /* font-size: 22px; */
     color: #f68b1f;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     font-weight: 600;
 }
 
 .info-content p {
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #555;
 }
 
