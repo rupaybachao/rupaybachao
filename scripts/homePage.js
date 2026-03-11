@@ -3,40 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("THIS IS THE CLIENT WIDTH ", document.documentElement.clientWidth);
     console.log("THIS IS THE HEIGHT ", window.innerHeight);
     console.log("THIS IS DOCUMENT HEIGHT ", document.documentElement.scrollHeight);
-    
-    // Check all containers that might affect height
-    const containers = document.querySelectorAll('.container-fluid, .row, [class*="col-"]');
-    containers.forEach((el, index) => {
-        console.log(`Element ${index}:`, el.className, 'Height:', el.offsetHeight);
-    });
-
-    // Safari height fix
-    function fixSafariHeight() {
-        // Force recalculation of heights
-        document.documentElement.style.height = window.innerHeight + 'px';
-        document.body.style.height = window.innerHeight + 'px';
-        
-        setTimeout(function() {
-            document.documentElement.style.height = '';
-            document.body.style.height = '';
-        }, 100);
-    }
-
-    // Call on load and resize
-    fixSafariHeight();
-    window.addEventListener('resize', fixSafariHeight);
 
     // Load navbar with better error handling
     loadNavbar();
 
-    // Initialize carousel after a short delay to ensure DOM is ready
-    setTimeout(() => {
-        initializeSuccessStoriesCarousel();
-    }, 500);
-    
-    // Initialize audio carousel
-    initializeAudioCarousel();
-    
     // Run animation observers
     runAnimationObservers();
 });
@@ -60,21 +30,7 @@ function loadNavbar() {
             
             // Set active link
             setActiveLink();
-            
-            // Initialize Bootstrap components
-            // initializeBootstrapComponents();
-            
-            // Recalculate layout
-            // setTimeout(() => {
-            //     window.dispatchEvent(new Event("resize"));
-                
-            //     // Force repaint for Safari
-            //     document.body.style.display = 'none';
-            //     document.body.offsetHeight; // Force reflow
-            //     document.body.style.display = '';
-                
-            //     console.log("Navbar loaded and initialized");
-            // }, 100);
+
         })
         .catch((error) => {
             console.error("Error loading navbar:", error);
@@ -265,71 +221,6 @@ function initializeSuccessStoriesCarousel() {
     }
 }
 
-function initializeAudioCarousel() {
-    const carouselInner = document.getElementById("audioCarouselInner");
-    if (!carouselInner) {
-        console.log("Audio carousel inner not found");
-        return;
-    }
-
-    const audioData = [
-    {
-        image: "./images/homepageBgimage1.jpg",
-        podccastDescription: " my description ",
-        audio: "./audios/audio",
-        podcastName: "mypodcast"
-    },
-    {
-        image: "./images/homepageBgimage2.jpg",
-        podccastDescription: " my description ",
-        audio: "./audios/audio",
-        podcastName: "mypodcast"
-    },
-    {
-        image: "./images/homepageBgimage3.jpg",
-        podccastDescription: " my description ",
-        audio: "./audios/audio",
-        podcastName: "mypodcast"
-    },
-    {
-        image: "./images/homepageBgimage4.jpg",
-        podccastDescription: " my description ",
-        audio: "./audios/audio",
-        podcastName: "mypodcast"
-    },
-];
-
-    carouselInner.innerHTML = audioData
-        .map((item, index) => `
-            <div class="h-100 carousel-item ${index === 0 ? "active" : ""}">
-                <div class="row g-0 p-3 bg-white" style="height: 50%;">
-                    <div class="video-wrapper position-relative w-100 h-100">
-                        <img src="${item.image}" class="w-100 h-100" style="object-fit: cover;" alt="${item.name}">
-                    </div>
-                </div>
-                <div class="row g-0 p-3 bg-white flex-column justify-content-center" style="height: 50%;">
-                    <h5 class="mb-2 fw-bold">${item.podcastName}</h5>
-                    <p class="text-muted">${item.podccastDescription}</p>
-                </div>
-            </div>
-        `).join('');
-
-    // Initialize the audio carousel
-    const audioCarousel = document.getElementById("audioCarousel");
-    if (audioCarousel && typeof bootstrap !== 'undefined') {
-        try {
-            new bootstrap.Carousel(audioCarousel, {
-                interval: false,
-                ride: false,
-                wrap: true
-            });
-            console.log("Audio carousel initialized");
-        } catch (error) {
-            console.error("Error initializing audio carousel:", error);
-        }
-    }
-}
-
 function runAnimationObservers() {
     // Fade up animation
     const fadeUpElements = document.querySelectorAll(".fade-up");
@@ -372,47 +263,4 @@ function runAnimationObservers() {
         fadeDownElements.forEach((el) => observer.observe(el));
         console.log(`Observing ${fadeDownElements.length} fade-down elements`);
     }
-}
-
-// Handle window resize events efficiently
-let resizeTimeout;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        console.log("Window resized:", window.innerWidth, "x", window.innerHeight);
-        
-        // Force recalculation of any dynamic heights
-        document.querySelectorAll('[class*="h-"]').forEach(el => {
-            if (el.offsetHeight === 0) {
-                el.style.height = 'auto';
-            }
-        });
-        
-        // Redispatch for any dependent components
-        window.dispatchEvent(new Event('resize-end'));
-    }, 150);
-});
-
-// Export for debugging
-// window.debug = {
-//     reloadNavbar: loadNavbar,
-//     initBootstrap: initializeBootstrapComponents,
-//     setActiveLink: setActiveLink,
-//     // fixSafariHeight: fixSafariHeight
-// };
-
-// Also run after navbar loads (in case DOMContentLoaded already fired)
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        // Already handled above
-    });
-} else {
-    // DOM is already loaded, run initialization
-    console.log("DOM already loaded, initializing...");
-    setTimeout(() => {
-        loadNavbar();
-        initializeSuccessStoriesCarousel();
-        initializeAudioCarousel();
-        runAnimationObservers();
-    }, 100);
 }
