@@ -923,12 +923,12 @@ hr {
     gap: 20px;
 }
 
-.form-row {
+/* .form-row {
     display: flex;
     gap: 20px;
-}
+} */
 
-.form-row input,
+/* .form-row input,
 .form-row select {
     flex: 1;
     padding: 16px;
@@ -938,13 +938,13 @@ hr {
     outline: none;
     background: #f9f9f9;
     transition: 0.3s ease;
-}
-
+} */
+/* 
 .form-row input:focus,
 .form-row select:focus {
     border-color: #f68b1f;
     background: #fff;
-}
+} */
 
 .info-card {
     background: #FFFFFF;
@@ -1045,6 +1045,9 @@ hr {
         height: auto !important;
         min-height: 300px;
     }
+    .QRImage{
+        height: 80px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1056,6 +1059,9 @@ hr {
     .my-px-5 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+    }
+    .QRImage{
+        height: 90px;
     }
 }
 
@@ -1074,6 +1080,9 @@ hr {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
+    .QRImage{
+        height: 100px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1091,6 +1100,9 @@ hr {
         width: 100%;
         max-width: 500px;
     }
+    .QRImage{
+        height: 100px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1107,6 +1119,9 @@ hr {
     h1 {
         font-size: 2rem !important;
     }
+    .QRImage{
+        height: 150px;
+    }
 }
 
 /* Extra small height fix */
@@ -1117,6 +1132,9 @@ hr {
 
     h1 {
         font-size: 25px !important;
+    }
+    .QRImage{
+        height: 80px;
     }
 }
 

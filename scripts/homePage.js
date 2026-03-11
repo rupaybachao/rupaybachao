@@ -48,10 +48,6 @@ function loadNavbar() {
         console.error("Header element not found!");
         return;
     }
-
-    // Show loading state
-    header.innerHTML = '<nav class="navbar mckNavbar"><div class="container-fluid"><div class="text-center w-100 p-3">Loading navigation...</div></div></nav>';
-
     fetch("navbar.html")
         .then((response) => {
             if (!response.ok) {
@@ -66,19 +62,19 @@ function loadNavbar() {
             setActiveLink();
             
             // Initialize Bootstrap components
-            initializeBootstrapComponents();
+            // initializeBootstrapComponents();
             
             // Recalculate layout
-            setTimeout(() => {
-                window.dispatchEvent(new Event("resize"));
+            // setTimeout(() => {
+            //     window.dispatchEvent(new Event("resize"));
                 
-                // Force repaint for Safari
-                document.body.style.display = 'none';
-                document.body.offsetHeight; // Force reflow
-                document.body.style.display = '';
+            //     // Force repaint for Safari
+            //     document.body.style.display = 'none';
+            //     document.body.offsetHeight; // Force reflow
+            //     document.body.style.display = '';
                 
-                console.log("Navbar loaded and initialized");
-            }, 100);
+            //     console.log("Navbar loaded and initialized");
+            // }, 100);
         })
         .catch((error) => {
             console.error("Error loading navbar:", error);
@@ -86,70 +82,70 @@ function loadNavbar() {
         });
 }
 
-function initializeBootstrapComponents() {
-    // Check if bootstrap is available
-    if (typeof bootstrap === 'undefined') {
-        console.error("Bootstrap not loaded!");
-        return;
-    }
+// function initializeBootstrapComponents() {
+//     // Check if bootstrap is available
+//     if (typeof bootstrap === 'undefined') {
+//         console.error("Bootstrap not loaded!");
+//         return;
+//     }
 
-    // Initialize all dropdowns
-    try {
-        const dropdownElements = document.querySelectorAll('.dropdown-toggle');
-        dropdownElements.forEach(element => {
-            // Check if already initialized
-            if (!element.classList.contains('dropdown-initialized')) {
-                new bootstrap.Dropdown(element);
-                element.classList.add('dropdown-initialized');
-            }
-        });
-        console.log(`Initialized ${dropdownElements.length} dropdowns`);
-    } catch (error) {
-        console.error("Error initializing dropdowns:", error);
-    }
+//     // Initialize all dropdowns
+//     try {
+//         const dropdownElements = document.querySelectorAll('.dropdown-toggle');
+//         dropdownElements.forEach(element => {
+//             // Check if already initialized
+//             if (!element.classList.contains('dropdown-initialized')) {
+//                 new bootstrap.Dropdown(element);
+//                 element.classList.add('dropdown-initialized');
+//             }
+//         });
+//         console.log(`Initialized ${dropdownElements.length} dropdowns`);
+//     } catch (error) {
+//         console.error("Error initializing dropdowns:", error);
+//     }
 
-    // Initialize offcanvas if present
-    try {
-        const offcanvasElement = document.getElementById('offcanvasTop');
-        if (offcanvasElement) {
-            const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//     // Initialize offcanvas if present
+//     try {
+//         const offcanvasElement = document.getElementById('offcanvasTop');
+//         if (offcanvasElement) {
+//             const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
             
-            // Add click handlers for offcanvas triggers
-            document.querySelectorAll('[data-bs-toggle="offcanvas"][data-bs-target="#offcanvasTop"]').forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    offcanvas.show();
-                });
-            });
-            console.log("Offcanvas initialized");
-        }
-    } catch (error) {
-        console.error("Error initializing offcanvas:", error);
-    }
+//             // Add click handlers for offcanvas triggers
+//             document.querySelectorAll('[data-bs-toggle="offcanvas"][data-bs-target="#offcanvasTop"]').forEach(trigger => {
+//                 trigger.addEventListener('click', (e) => {
+//                     e.preventDefault();
+//                     offcanvas.show();
+//                 });
+//             });
+//             console.log("Offcanvas initialized");
+//         }
+//     } catch (error) {
+//         console.error("Error initializing offcanvas:", error);
+//     }
 
-    // Initialize collapse toggles
-    try {
-        const collapseElements = document.querySelectorAll('[data-bs-toggle="collapse"]');
-        collapseElements.forEach(element => {
-            if (!element.classList.contains('collapse-initialized')) {
-                new bootstrap.Collapse(element, { toggle: false });
-                element.classList.add('collapse-initialized');
-            }
-        });
-    } catch (error) {
-        console.error("Error initializing collapses:", error);
-    }
+//     // Initialize collapse toggles
+//     try {
+//         const collapseElements = document.querySelectorAll('[data-bs-toggle="collapse"]');
+//         collapseElements.forEach(element => {
+//             if (!element.classList.contains('collapse-initialized')) {
+//                 new bootstrap.Collapse(element, { toggle: false });
+//                 element.classList.add('collapse-initialized');
+//             }
+//         });
+//     } catch (error) {
+//         console.error("Error initializing collapses:", error);
+//     }
 
-    // Initialize any tooltips
-    try {
-        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        if (tooltips.length > 0) {
-            tooltips.forEach(element => new bootstrap.Tooltip(element));
-        }
-    } catch (error) {
-        console.error("Error initializing tooltips:", error);
-    }
-}
+//     // Initialize any tooltips
+//     try {
+//         const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+//         if (tooltips.length > 0) {
+//             tooltips.forEach(element => new bootstrap.Tooltip(element));
+//         }
+//     } catch (error) {
+//         console.error("Error initializing tooltips:", error);
+//     }
+// }
 
 function setActiveLink() {
     let currentPage = window.location.pathname.split("/").pop();
@@ -309,14 +305,11 @@ function initializeAudioCarousel() {
                 <div class="row g-0 p-3 bg-white" style="height: 50%;">
                     <div class="video-wrapper position-relative w-100 h-100">
                         <img src="${item.image}" class="w-100 h-100" style="object-fit: cover;" alt="${item.name}">
-                        <div class="position-absolute bottom-0 start-0 p-3 w-100 bg-dark bg-opacity-50">
-                            
-                        </div>
                     </div>
                 </div>
                 <div class="row g-0 p-3 bg-white flex-column justify-content-center" style="height: 50%;">
-                    <h5 class="mb-2 fw-bold">${item.name}</h5>
-                    <p class="text-muted">${item.description}</p>
+                    <h5 class="mb-2 fw-bold">${item.podcastName}</h5>
+                    <p class="text-muted">${item.podccastDescription}</p>
                 </div>
             </div>
         `).join('');
@@ -401,12 +394,12 @@ window.addEventListener('resize', () => {
 });
 
 // Export for debugging
-window.debug = {
-    reloadNavbar: loadNavbar,
-    initBootstrap: initializeBootstrapComponents,
-    setActiveLink: setActiveLink,
-    // fixSafariHeight: fixSafariHeight
-};
+// window.debug = {
+//     reloadNavbar: loadNavbar,
+//     initBootstrap: initializeBootstrapComponents,
+//     setActiveLink: setActiveLink,
+//     // fixSafariHeight: fixSafariHeight
+// };
 
 // Also run after navbar loads (in case DOMContentLoaded already fired)
 if (document.readyState === 'loading') {
