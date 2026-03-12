@@ -3,12 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("THIS IS THE CLIENT WIDTH ", document.documentElement.clientWidth);
     console.log("THIS IS THE HEIGHT ", window.innerHeight);
     console.log("THIS IS DOCUMENT HEIGHT ", document.documentElement.scrollHeight);
+            videoLanguageChange();
 
     // Load navbar with better error handling
     loadNavbar();
-
     // Run animation observers
     runAnimationObservers();
+
 });
 
 function loadNavbar() {
@@ -102,6 +103,24 @@ function loadNavbar() {
 //         console.error("Error initializing tooltips:", error);
 //     }
 // }
+ function videoLanguageChange(){
+
+    try{
+    let video = document.getElementById("languageVideo");
+    let isSwitchChecked = document.getElementById("languageSwitch");
+
+    if(isSwitchChecked.checked){
+        video.src = "./videos/rupaybachaoVid.mp4";
+    }
+    else{
+        video.src = "./videos/rupaybachaoVidHindi.mp4";
+    }
+
+    video.play();
+}catch(e){
+
+}
+}
 
 function setActiveLink() {
     let currentPage = window.location.pathname.split("/").pop();
